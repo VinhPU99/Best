@@ -1,0 +1,445 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background: #fcf2eb;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-2" id="bestarion">
+        <div class="g-1 wow fadeInRight">
+            <div class="title-inner">
+                <div class="sub-title">| We Transform Businesses</div>
+                <div class="title">
+                    <span class="watermark">Bestarion</span>
+                    <div>For Over 19 Years<br />For Millions of Users</div>
+                </div>
+            </div>
+            <div class="t-1 wow fadeInRight" data-wow-delay="1s">
+                Do you face a software engineering shortage? Maybe your in-house team cannot keep up with the increasing demands?
+                Our software outsourcing services are an excellent solution for businesses that need extra capacity or specific
+                expertise that they don’t have in-house.
+            </div>
+            <div class="t-1 wow fadeInRight" data-wow-delay="1.2s">
+                The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep
+                industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the
+                needs and behavior of their users.
+            </div>
+            <div class="t-1 wow fadeInRight" data-wow-delay="1.4s">
+                We’ve exceled our experience in a wide range of industries to bring valuable insights and provide our customers.
+            </div>
+            <div class="t-2">
+                <a href="https://bestarion.com/about-us/" class="wow fadeInRight" data-wow-delay="1.6s">LEARN MORE &#8594;</a>
+            </div>
+        </div>
+        <div class="g-2 wow fadeInLeft" data-wow-delay="1.8s">
+            <div class="wrap-img">
+                <img src="https://bestarion.com/wp-content/uploads/2023/01/software-development-s2-bg.png" alt="software-development-s2-bg" />
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-2 {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .section-2 .title-inner {
+            padding-bottom: unset !important;
+        }
+
+        .section-2 .g-1 {
+            width: 100%;
+        }
+
+        .section-2 .g-1 .t-1 {
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+
+        .section-2 .g-1 .t-1 {
+            margin-top: 20px;
+        }
+
+        .section-2 .g-1 .t-2 {
+            margin-top: 28px;
+        }
+
+        .section-2 .g-1 .t-2 a {
+            font-size: 1.3rem;
+            text-decoration: underline;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .section-2 .g-1-1 {
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 10px;
+        }
+
+        .section-2 .g-1-1 .item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .section-2 .g-1-1 .item .item__icon::before {
+            content: '✔';
+        }
+
+        .section-2 .g-1-1 .item .item__icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 8px;
+        }
+
+        .section-2 .g-1-1 .item .item__text {
+            flex: 1 1 auto;
+            padding-left: 8px;
+            font-size: 1.3rem;
+        }
+
+        .section-2 .g-2 {
+            width: 100%;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .section-2 .g-2 .wrap-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media only screen and (min-width: 576px) {
+
+            .section-2 .g-1 .t-1 {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+
+
+
+            .section-2 .g-1 .t-2 a {
+                font-size: 1rem;
+            }
+
+            .section-2 .g-1-1 .item {
+                width: 50%;
+            }
+
+            .section-2 .g-1-1 .item .item__icon {
+                width: 22px;
+                height: 22px;
+
+                border-width: 2px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+            .section-2 .g-1-1 .item .item__text {
+                padding-left: 15px;
+                font-size: 1.142rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            .section-2 .g-1 .t-1 {
+                font-size: 1.142rem;
+                margin-top: 15px;
+            }
+
+            .section-2 .g-1 .t-2 a {
+                font-size: 1.142rem;
+                margin-top: 64px;
+            }
+
+            .section-2 .g-1-1 .item .item__icon {
+                width: 22px;
+                height: 22px;
+
+                border-width: 2px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+            .section-2 .g-1-1 .item .item__text {
+                padding-left: 15px;
+                font-size: 1.142rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .section-2 {
+                flex-flow: row nowrap;
+                margin-top: 120px;
+            }
+
+            .section-2 .g-1 {
+                width: 45%;
+                order: 2;
+                padding-top: 60px;
+            }
+
+            .section-2 .g-2 {
+                width: 55%;
+                order: 1;
+                padding-right: 50px;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

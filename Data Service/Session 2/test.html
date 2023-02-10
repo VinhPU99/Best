@@ -1,0 +1,660 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css">
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <script src="../../libs/owl.carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../libs/owl.carousel/owl.carousel.css">
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+    <style>
+        .row-action-center {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .row-action-center a {
+            display: inline-block;
+            color: white;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 6px 10px;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            text-decoration: unset;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+        }
+
+        .row-action-center a:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media only screen and (min-width: 576px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 6px 10px;
+                font-size: 1.166rem;
+                line-height: 1.166rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 12px 16px;
+                font-size: 1.142rem;
+                line-height: 1.142rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-2" id="data">
+        <div class="wrap-title-inner">
+            <div class="title-inner">
+                <div class="sub-title">&nbsp;</div>
+                <div class="title">
+                    <span class="watermark">Data</span>
+                    <div>What Story Does Your Data Have to Tell?</div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s2-icon-1.png" alt="data-services-s2-icon-1">
+                            </div>
+                            <div class="item--title">
+                                Speedy Comprehension of Information
+                            </div>
+                            <div class="item--des">
+                                Analyze and present vast scales of data quickly and efficiently. Save time and enhance visibility of the indicators that should be leading your business to future success.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s2-icon-2.png" alt="data-services-s2-icon-2">
+                            </div>
+                            <div class="item--title">
+                                Ascertain Relationships and Patterns
+                            </div>
+                            <div class="item--des">
+                                Graphically present complex datasets, identify relations and trends to rapidly correlate the influences affecting the business today.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s2-icon-3.png" alt="data-services-s2-icon-3">
+                            </div>
+                            <div class="item--title">
+                                Determine Emerging Trends
+                            </div>
+                            <div class="item--des">
+                                Predict and act on emerging trends before emerging bottlenecks stall critical opportunities for growth.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s2-icon-4.png" alt="data-services-s2-icon-4">
+                            </div>
+                            <div class="item--title">
+                                Communicate your data story!
+                            </div>
+                            <div class="item--des">
+                                Present impactful, actionable, and engaging insights to stakeholders at every level of the enterprise.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-2 .title-inner {
+            text-align: center;
+        }
+
+        .section-2 .title-inner .watermark {
+            left: 0 !important;
+            width: 100%;
+        }
+
+        .section-2 .owl-carousel {
+            position: relative;
+            display: block;
+        }
+
+        /* nav */
+        .section-2 .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white !important;
+            color: var(--primary-color) !important;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            font-size: 10px;
+        }
+
+        .section-2 .owl-nav .owl-prev {
+            left: 0;
+        }
+
+        .section-2 .owl-nav .owl-next {
+            right: 0;
+        }
+
+        /* owl-stage-outer */
+        .section-2 .owl-stage {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0;
+        }
+
+        .section-2 .owl-item {
+            /* padding: 0 40px; */
+            width: 100%;
+        }
+
+        .section-2 .item {
+            display: flex;
+            flex-flow: column;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            min-height: 100%;
+            padding: 20px;
+        }
+
+        .section-2 .owl-item.active .item {
+            box-shadow: 0px 4px 30px rgba(255, 202, 161, 0.8);
+        }
+
+        /* Content */
+        .section-2 .owl-item .item--img {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-2 .owl-item .item--img img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .section-2 .owl-item .item--title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: var(--primary-color);
+            /* height: 40px; */
+        }
+
+        .section-2 .owl-item .item--des {
+            flex: 1 1;
+            text-align: center;
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section-2 .owl-carousel .owl-stage-outer {
+                overflow: unset;
+            }
+
+            .section-2 .owl-nav {
+                margin: 70px;
+            }
+
+            .section-2 .owl-nav {
+                display: none;
+            }
+
+            .section-2 .owl-stage {
+                width: unset !important;
+                transform: unset !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                margin: -30px -12px;
+            }
+
+            .section-2 .owl-item.cloned {
+                display: none;
+            }
+
+            .section-2 .owl-item {
+                /* width: 50% !important; */
+                padding: 12px;
+            }
+
+            /* .section-2 .owl-item.active .item,
+            .section-2 .owl-item .item {
+                border-radius: 15px;
+                border: 1px solid #fcf2eb;
+                padding: 30px;
+                box-shadow: 0px 4px 30px 1px rgba(217, 217, 217, 0.7);
+            } */
+
+            /* Content */
+            .section-2 .owl-item .item--img img {
+                width: 75px;
+                height: 75px;
+            }
+
+            .section-2 .owl-item .item--title {
+                font-size: 1.428rem;
+                margin-top: 18px;
+                height: 50px;
+            }
+
+            .section-2 .owl-item .item--des {
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .section-2 .title-inner br {
+                display: inline;
+            }
+
+            .section-2 .owl-stage {
+                margin: -30px;
+            }
+
+            .section-2 .owl-item.cloned {
+                display: none;
+            }
+
+            .section-2 .owl-item {
+                width: calc(100%/2) !important;
+                padding: 30px;
+            }
+
+            /* .section-2 .owl-item.active .item,
+            .section-2 .owl-item .item {
+                border-radius: 15px;
+                border: 1px solid #fcf2eb;
+                padding: 10px 30px 40px;
+                box-shadow: 0px 4px 30px 1px rgba(217, 217, 217, 0.7);
+            } */
+
+            /* Content */
+            .section-2 .owl-item .item--img img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .section-2 .owl-item .item--title {
+                font-size: 1.5rem;
+                margin-top: 40px;
+                height: unset;
+            }
+
+            .section-2 .owl-item .item--des {
+                font-size: 1.142rem;
+                margin-top: 25px;
+            }
+        }
+    </style>
+    <!-- <script>
+        // Owl carousel
+        $(function () {
+            var owl = $('.section-2 .owl-carousel');
+
+            owl.on('initialize.owl.carousel', function () {
+                owl.addClass('owl-loaded owl-drag owl-refresh');
+            });
+            owl.on('initialized.owl.carousel', function () {
+                setTimeout(function () {
+                    handleResize(true);
+                }, 500);
+            });
+
+            var allowedAutoplay = true;
+            var enabledAutoplay = false;
+            var smartSpeed = 1000;
+            var autoplaySpeed = 1000;
+            var autoplayTimeout = 5000;
+
+            owl.owlCarousel(
+                Object.assign(
+                    {
+                        margin: 0,
+                        nav: true,
+                        dots: false,
+                        items: 1,
+                        smartSpeed,
+                        loop: false,
+                        autoplay: false,
+                        autoplayHoverPause: true,
+                        navText: [
+                            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+                        ],
+                    },
+                    allowedAutoplay
+                        ? {
+                            loop: true,
+                            autoplaySpeed,
+                            autoplayTimeout,
+                        }
+                        : {}
+                )
+            );
+
+            function autoplayToggle(enable) {
+                if (!enable) {
+                    owl.trigger('stop.owl.autoplay');
+                }
+
+                var carousel = owl.data('owl.carousel');
+                // Auto play
+                carousel.settings.autoplay = enable; //don't know if both are necessary
+                carousel.options.autoplay = enable;
+
+                // // Drag
+                // carousel.settings.mouseDrag = !enable;
+                // carousel.options.mouseDrag = !enable
+                owl.trigger('refresh.owl.carousel');
+                enabledAutoplay = enable;
+            }
+
+            function handleResize(firstLoad) {
+                if (allowedAutoplay) {
+                    if (window.innerWidth >= 576) {
+                        if (enabledAutoplay || firstLoad === true) {
+                            autoplayToggle(false);
+                        }
+                    } else {
+
+                        if (!enabledAutoplay || firstLoad === true) {
+                            autoplayToggle(true);
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            window.hello = owl.data('owl.carousel');
+        });
+    </script> -->
+
+
+
+
+</body>
+
+</html>

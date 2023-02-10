@@ -1,0 +1,195 @@
+<style>
+    #homepage_banner_slider.owl-carousel .owl-item.transit.transit .wow,
+    #homepage_banner_slider.owl-carousel .owl-item.transit.transit .wow * {
+        visibility: visible !important;
+    }
+
+    #homepage_banner_slider.owl-carousel .owl-item:not(.active) .wow,
+    #homepage_banner_slider.owl-carousel .owl-item:not(.active) .wow * {
+        visibility: hidden !important;
+        animation-name: none !important;
+        transition: none !important;
+    }
+
+    #homepage_banner_slider.owl-carousel .owl-item.active .wow {
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+    }
+
+    .banner-header {
+        position: relative;
+    }
+
+    .banner-header>img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .banner-header .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 90%;
+        color: white;
+    }
+
+    .banner-header .t-1 {
+        font-size: 1rem;
+    }
+
+    .banner-header .t-2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .banner-header .t-2 br {
+        display: none;
+    }
+
+    .banner-header .t-3 {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .banner-header .actions {
+        margin-top: 5px;
+    }
+
+    .banner-header .actions a {
+        display: inline-block;
+        color: white;
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+        border-radius: 20px;
+        padding: 4px 6px;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        text-decoration: unset;
+        cursor: pointer;
+        animation: pulse 2.5s infinite;
+    }
+
+    .banner-header .actions a:hover {
+        background: white;
+        color: var(--primary-color);
+    }
+
+    @media only screen and (min-width: 480px) {
+        .banner-header>img {
+            min-height: 250px;
+        }
+
+        .banner-header .t-1 {
+            font-size: 1.3rem;
+        }
+
+        .banner-header .t-2 {
+            font-size: 3rem;
+            line-height: 3rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .banner-header .t-2 br {
+            display: inline;
+        }
+
+        .banner-header .t-3 {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+        .banner-header .actions {
+            margin-top: 10px;
+        }
+
+        .banner-header .actions a {
+            padding: 6px 10px;
+            font-size: 1rem;
+        }
+    }
+
+
+    @media only screen and (min-width: 576px) {
+        .banner-header .t-1 {
+            font-size: 1rem;
+        }
+
+        .banner-header .t-2 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .banner-header .t-3 {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .banner-header .actions {
+            margin-top: 20px;
+        }
+
+        .banner-header .actions a {
+            padding: 6px 10px;
+            font-size: 1.166rem;
+            line-height: 1.166rem;
+        }
+    }
+
+    @media only screen and (min-width: 576px) {
+        .banner-header>img {
+            min-height: 260px;
+        }
+
+        .banner-header .t-3 {
+            width: 70%;
+        }
+    }
+
+
+    @media only screen and (min-width: 992px) {
+        .banner-header .banner-content {
+            left: 10%;
+        }
+
+        .banner-header .t-1 {
+            font-size: 1.142rem;
+        }
+
+        .banner-header .t-2 {
+            font-size: 4.285rem;
+            line-height: 4.285rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .banner-header .t-3 {
+            font-size: 1.142rem;
+            margin-top: 20px;
+        }
+
+        .banner-header .actions {
+            margin-top: 50px;
+        }
+
+        .banner-header .actions a {
+            padding: 12px 16px;
+            font-size: 1.142rem;
+            line-height: 1.142rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .banner-header .t-3 {
+            width: 50%;
+        }
+    }
+</style>

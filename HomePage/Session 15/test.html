@@ -1,0 +1,386 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <script src="../../libs/owl.carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../libs/owl.carousel/owl.carousel.css" />
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+    <style>
+        .row-action-center {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .row-action-center a {
+            display: inline-block;
+            color: white;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 6px 10px;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            text-decoration: unset;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+        }
+
+        .row-action-center a:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media only screen and (min-width: 576px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 6px 10px;
+                font-size: 1.166rem;
+                line-height: 1.166rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 12px 16px;
+                font-size: 1.142rem;
+                line-height: 1.142rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-15" id="blogs">
+        <div class="wrap-title-inner">
+            <div class="title-inner">
+                <div class="sub-title">| Blog & Insight</div>
+                <div class="title">
+                    <span class="watermark">News</span>
+                    <div>Articles from resource library</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row-action-center section-15">
+            <a href="/category/blog/">View All Post</a>
+        </div> -->
+    </div>
+
+    <style>
+        .blog-list .blog-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: unset !important;
+        }
+
+        .blog-list .tg-blog-widget {
+            background: white;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .blog-list .tg-blog-widget .blog-content {
+            flex: 1 1;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .blog-list .tg-blog-widget .blog-content .entry-title {
+            flex: 1 1;
+        }
+
+        .blog-list .tg-blog-widget .blog-content .entry-summary {
+            display: none;
+        }
+
+        .blog-list .tg-blog-widget .blog-content .read-more-container {
+            padding: 0 0 10px;
+            background: white !important;
+        }
+
+        .section-15.row-action-center {
+            padding-bottom: 55px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .blog-list .blog-wrapper {
+                margin: 0;
+            }
+
+            .blog-list .tg-blog-widget {
+                width: 100% !important;
+                margin: 0 0 30 !important;
+            }
+
+            .section-15.row-action-center {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .section-15.row-action-center {
+                padding-bottom: 25px;
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>

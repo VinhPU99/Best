@@ -1,0 +1,495 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-4" id="why-us">
+        <div class="wrap-title-inner">
+            <div class="title-inner">
+                <div class="sub-title">&nbsp;</div>
+                <div class="title">
+                    <span class="watermark">Benefits</span>
+                    <div>Why Bestarion For Data Services?</div>
+                </div>
+            </div>
+        </div>
+        <div class="groups">
+            <div class="group-1">
+                <div class="list-items">
+                    <div class="item item--1 wow fadeInUp">
+                        <div class="item-content">
+                            <div class="item__icon">
+                                <img alt="section-4-1" src="https://bestarion.com/wp-content/uploads/2022/11/hp-s7-icon-1.png" />
+                            </div>
+                            <div class="item__title">
+                                Customized Offerings
+                            </div>
+                            <div class="item__des">
+                                We can build a customized solution from scratch based on your requirements and preferred technology stack
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item--2 wow fadeInUp">
+                        <div class="item-content">
+                            <div class="item__icon">
+                                <img alt="section-4-1" src="https://bestarion.com/wp-content/uploads/2022/11/hp-s7-icon-2.png" />
+                            </div>
+                            <div class="item__title">
+                                Profound Expertise
+                            </div>
+                            <div class="item__des">
+                                With 30+ BI and Analytics implementations, Bestarion is regarded as a leader in the data and analytics space
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item--3 wow fadeInUp">
+                        <div class="item-content">
+                            <div class="item__icon">
+                                <img alt="section-4-3" src="https://bestarion.com/wp-content/uploads/2022/11/hp-s7-icon-3.png" />
+                            </div>
+                            <div class="item__title">
+                                Focus on Data Security
+                            </div>
+                            <div class="item__des">
+                                To ensure your data security, we store and process data within highly secure on-premises and cloud facilities and conduct 24/7 in-house security monitoring.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item--4 wow fadeInUp">
+                        <div class="item-content">
+                            <div class="item__icon">
+                                <img alt="section-4-4" src="https://bestarion.com/wp-content/uploads/2022/11/hp-s7-icon-4.png" />
+                            </div>
+                            <div class="item__title">
+                                Maintenance And Support
+                            </div>
+                            <div class="item__des">
+                                We also provides maintenance and support to drive user adoption and ensure the system is fully leveraged within your organization.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-2">
+                <div class="images-wrap">
+                    <img class="wow fadeInRight" alt="data-services-s4-image" src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s4-image.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #section-benefits {
+            background-color: #F5F5F5;
+        }
+
+        .section-4 {
+            padding-bottom: 50px;
+        }
+
+        .section-4 .wrap-title-inner {
+            margin: auto;
+            text-align: center;
+        }
+
+        .section-4 .wrap-title-inner .watermark {
+            left: 0 !important;
+            width: 100%;
+        }
+
+        .section-4 .groups {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        /* Group 2 */
+        .section-4 .group-2 {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .section-4 .group-2 .images-wrap {
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-4 .group-2 .images-wrap img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Group 1 */
+        .section-4 .group-1 {
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+        }
+
+        .section-4 .group-1 .list-items {
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            margin: -15px -8px;
+        }
+
+        .section-4 .group-1 .list-items .item {
+            padding: 15px 8px;
+            width: 50%;
+        }
+
+        .section-4 .group-1 .list-items .item-content {
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .section-4 .group-1 .list-items .item-content .item__icon img {
+            width: 40px;
+            height: 40px
+        }
+
+        .section-4 .group-1 .list-items .item-content .item__title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+            height: 40px;
+        }
+
+        .section-4 .group-1 .list-items .item-content .item__des {
+            font-size: 1.3rem;
+            margin-top: 15px;
+        }
+
+
+        @media only screen and (min-width: 576px) {
+            .section-4 {
+                padding-bottom: 70px;
+            }
+
+            .section-4 .group-2 {
+                margin-top: 50px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section-4 {
+                padding-bottom: 90px;
+            }
+
+            .section-4 .group-1 {
+                flex-flow: row wrap;
+            }
+
+            .section-4 .group-1 .list-items .item {
+                width: 50%;
+            }
+
+            .section-4 .group-1 .list-items .item-content {
+                min-height: 100%;
+            }
+
+            .section-4 .group-1 .list-items .item-content .item__icon img {
+                width: 50px;
+                height: 50px
+            }
+
+            .section-4 .group-1 .list-items .item-content .item__title {
+                font-size: 1.357rem;
+                height: unset;
+            }
+
+            .section-4 .group-1 .list-items .item-content .item__des {
+                font-size: 1rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .section-4 .groups {
+                flex-flow: row wrap;
+            }
+
+            .section-4 .group-1 {
+                width: 60%;
+                padding-right: 40px;
+            }
+
+            .section-4 .group-1 .list-items {
+                margin: -32px -15px;
+            }
+
+            .section-4 .group-1 .list-items .item {
+                padding: 32px 15px;
+                width: 50%;
+            }
+
+            .section-4 .group-1 .list-items .item-content .item__title {
+                font-size: 1.285rem;
+            }
+
+            .section-4 .group-1 .list-items .item-content .item__des {
+                font-size: 1.142rem;
+            }
+
+            .section-4 .group-2 {
+                width: 40%;
+                margin-top: 0px;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

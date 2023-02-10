@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background-color: #f0f0f1;
+        }
+
+        .section-3 {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-3">
+        <div class="block">
+            <div class="block-1">
+                <div class="block-1-title">
+                    Web Application Development
+                </div>
+                <div class="block-1-des">
+                    We develop cutting-edge web applications using agile methodologies and the latest technologies to help elevate the status of your business in the market.
+                </div>
+            </div>
+            <div class="block-2">
+                <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Web-Application-Development.png" alt="s3-1" />
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-1">
+                <div class="block-1-title">
+                    Custom Mobile App Development
+                </div>
+                <div class="block-1-des">
+                    Delight your users with solid and feature-rich native iOS / Android applications. We cover the entire mobile app development process, from idea conceptualization to delivery and ongoing support.
+                </div>
+            </div>
+            <div class="block-2">
+                <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Mobile-App-Development.png" alt="s3-2" />
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-1">
+                <div class="block-1-title">
+                    Experts in key programming languages
+                </div>
+                <div class="block-1-des">
+                    You can hire software experts of different levels (Middle, Senior, Full Stack) at Bestarion:
+                </div>
+                <div class="group-position">
+                    <ul>
+                        <li>Python Developer</li>
+                        <li>C/C++ Developer</li>
+                        <li>NodeJS Developer</li>
+                        <li>ReactJS Developer</li>
+                        <li>JavaScript Developer</li>
+                    </ul>
+                    <ul>
+                        <li>Ruby Developer</li>
+                        <li>.NET Developer</li>
+                        <li>Golang Developer</li>
+                        <li>Java Developer</li>
+                        <li>PHP Developer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block-2">
+                <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Programmer.png" alt="s3-3" />
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .section-3 {
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        .section-3 .block {
+            margin-top: 50px;
+            display: flex;
+            flex-flow: row nowrap;
+            background: white;
+            box-shadow: 10px 10px 0px #d6d6d6;
+        }
+
+        .section-3 .block-1 {
+            padding: 15px 30px;
+            width: 100%;
+        }
+
+        .section-3 .block-1 .block-1-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .section-3 .block-1 .block-1-des {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .section-3 .block-1 .group-position {
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 10px;
+        }
+
+        .section-3 .block-1 ul {
+            width: 100%;
+            padding-left: 16px;
+            margin: 0;
+        }
+
+        .section-3 .block-1 ul li {
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .section-3 .block-2 {
+            width: 45%;
+            display: none;
+        }
+
+        .section-3 .block-2 img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and (min-width: 576px) {
+            .section-3 .block-1 ul {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .section-3 .block-1 {
+                width: 55%;
+            }
+
+            .section-3 .block .block-2 {
+                display: block;
+            }
+
+            .section-3 .block:nth-child(2n) .block-1 {
+                order: 2;
+            }
+
+            .section-3 .block:nth-child(2n) .block-2 {
+                order: 1;
+            }
+        }
+    </style>
+</body>
+
+</html>

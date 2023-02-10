@@ -1,0 +1,353 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            /* max-width: 1200px; */
+            margin: auto;
+        }
+    </style>
+    <style>
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.1;
+            position: absolute;
+            left: 0;
+            top: -18px;
+            right: 0;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -30px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -45px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section section-10" id="section-contact-us">
+        <div class="content">
+            <div class="p-1 wow fadeInLeft" data-wow-delay="0s">
+                It’s time take your business next level
+            </div>
+            <div class="p-2 wow fadeInRight" data-wow-delay="0s">
+                <a href="mailto:info@bestarion.com">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .section-10 {
+            background: url('https://bestarion.com/wp-content/uploads/2022/11/hp-s9-bg.png'), white;
+            background-size: cover, cover;
+            margin-top: 20px;
+        }
+
+        .section-10 .content {
+            text-align: center;
+            /* max-width: 1200px; */
+            padding: 36px 36px;
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .section-10 .content .p-1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .section-10 .content .p-2 {
+            margin-top: 20px;
+        }
+
+        .section-10 .content .p-2 a {
+            display: inline-block;
+            color: white;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 20px;
+            padding: 7px 10px;
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            text-align: center;
+            text-decoration: unset;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+
+        .section-10 .content .p-2 a:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section-10 {
+                margin-top: 50px;
+            }
+
+            .section-10 .content {
+                padding: 50px 40px;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section-10 .content .p-1 {
+                font-size: 1.357rem;
+                text-align: left;
+                flex: 1 1;
+                padding-right: 40px;
+            }
+
+            .section-10 .content .p-2 {
+                margin-top: 0;
+            }
+
+            .section-10 .content .p-2 a {
+                padding: 10px 16px;
+                font-size: 1.166rem;
+                line-height: 1.166rem;
+            }
+        }
+
+
+        @media only screen and (min-width: 1200px) {
+            .section-10 {
+                margin-top: 100px;
+            }
+
+            .section-10 .content {
+                padding: 68px 100px;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .section-10 .content .p-1 {
+                font-size: 2.857rem;
+                padding-right: 200px;
+            }
+
+            .section-10 .content .p-2 {
+                margin-top: 0;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

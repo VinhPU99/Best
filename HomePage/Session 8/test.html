@@ -1,0 +1,394 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            /* max-width: 1200px; */
+            margin: auto;
+        }
+    </style>
+    <style>
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.1;
+            position: absolute;
+            left: 0;
+            top: -18px;
+            right: 0;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -30px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -45px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section section-8" id="statistic">
+        <div class="list-items">
+            <div class="item">
+                <div class="item-content">
+                    <div class="figure-number">
+                        <span class="count" data-count="19" data-duration="2000">0</span><span>+</span>
+                    </div>
+                    <div class="figure-label">Years Experience</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <div class="figure-number">
+                        <span class="count" data-count="150" data-duration="2000">0</span><span>+</span>
+                    </div>
+                    <div class="figure-label">Employees</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <div class="figure-number">
+                        <span class="count" data-count="215" data-duration="2000">0</span><span>+</span>
+                    </div>
+                    <div class="figure-label">Successful Projects</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <div class="figure-number">
+                        <span class="count" data-count="95" data-duration="2000">0</span><span>%</span>
+                    </div>
+                    <div class="figure-label">Clients Satisfied</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .section-8 {
+            background-color: #FE8421;
+            margin-top: 20px;
+        }
+
+        .section-8 .list-items {
+            margin: auto;
+            max-width: 1200px;
+            padding: 0px 18px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .section-8 .item {
+            width: 50%;
+            padding: 18px 0;
+        }
+
+        .section-8 .item-content {
+            text-align: center;
+            color: white;
+        }
+
+        .section-8 .item-content .figure-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .section-8 .item-content .figure-label {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+
+        @media only screen and (min-width: 768px) {
+            .section-8 {
+                margin-top: 50px;
+            }
+
+            .section-8 .item {
+                width: 25%;
+                padding: 45px 0;
+            }
+
+            .section-8 .item-content .figure-number {
+                font-size: 3.214rem;
+            }
+
+            .section-8 .item-content .figure-label {
+                font-size: 1rem;
+                margin-top: 8px;
+            }
+        }
+
+        @media only screen and (min-width: 1400px) {
+            .section-8 .item {
+                width: 25%;
+                padding: 48px 0;
+            }
+
+            .section-8 .item-content .figure-number {
+                font-size: 4.642rem;
+            }
+
+            .section-8 .item-content .figure-label {
+                font-size: 1.142rem;
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+            var counted = false;
+
+            function scrollAction() {
+                var oTop = $('.section-8 .list-items').offset().top - window.innerHeight;
+                if (!counted && $(window).scrollTop() > oTop) {
+                    $('.figure-number .count').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count'),
+                            countDuration = +$this.attr('data-duration') || 1000;
+                        $({
+                            countNum: $this.text(),
+                        }).animate({
+                            countNum: countTo
+                        },
+
+                            {
+
+                                duration: countDuration,
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function () {
+                                    $this.text(this.countNum);
+                                    //alert('finished');
+                                }
+
+                            });
+                    });
+                    counted = true;
+                }
+            }
+
+            scrollAction();
+            setTimeout(() => {
+                $(window).scroll(scrollAction);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

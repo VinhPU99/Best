@@ -1,0 +1,553 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- <script src="../../libs/owl.carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../libs/owl.carousel/owl.carousel.css" /> -->
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+    <style>
+        .row-action-center {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .row-action-center a {
+            display: inline-block;
+            color: white;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 6px 10px;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            text-decoration: unset;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+        }
+
+        .row-action-center a:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media only screen and (min-width: 576px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 6px 10px;
+                font-size: 1.166rem;
+                line-height: 1.166rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 12px 16px;
+                font-size: 1.142rem;
+                line-height: 1.142rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="section-footer-content">
+            <div>
+                <h3 class="widget-title">Get in touch</h3>
+                <div class="group group--has-icon">
+                    <div class="group-item">
+                        <i class="fa fa-envelope"></i>
+                        <div class="group-item-label">
+                            <div>
+                                <a class="mailto-link" href="mailto:info@bestarion.com">info@bestarion.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-item">
+                        <i class="fa fa-phone"></i>
+                        <div class="group-item-label">
+                            <div>Sale: <a href="tel:+842837155742">(+84)28 37 155 742</a></div>
+                            <div>Career: <a href="tel:+842837154153">(+84)28 37 154 153</a></div>
+                        </div>
+                    </div>
+                    <div class="group-item">
+                        <i class="fa fa-map-marker"></i>
+                        <div class="group-item-label">
+                            <div>
+                                <a href="https://g.page/bestarion?share">3rd Floor, QTSC Building 1, Street 14, Quang Trung Software City, Tan Chanh Hiep Ward, District 12, HCM City, Vietnam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="widget-title">Services</h3>
+                <div class="group">
+                    <div class="group-item">
+                        <div class="group-item-label">
+                            <div>
+                                <a href="/services/software-development/">Software Development</a>
+                            </div>
+                            <div>
+                                <a href="/">Software Testing</a>
+                            </div>
+                            <div>
+                                <a href="/services/data-services/">Data Services</a>
+                            </div>
+                            <div>
+                                <a href="/services/devops/">DevOps</a>
+                            </div>
+                            <div>
+                                <a href="/">Business Process Outsourcing</a>
+                            </div>
+                            <div>
+                                <a href="/services/staff-augmentation/">Staff Augmentation</a>
+                            </div>
+                            <div>
+                                <a href="/">IT Consultancy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="widget-title">Company</h3>
+                <div class="group">
+                    <div class="group-item">
+                        <div class="group-item-label">
+                            <div>
+                                <a href="/careers/">Career</a>
+                            </div>
+                            <div>
+                                <a href="/about-us/">About Us</a>
+                            </div>
+                            <div>
+                                <a href="/">Our Workflow</a>
+                            </div>
+                            <div>
+                                <a href="/success-stories/">Success Stories</a>
+                            </div>
+                            <div>
+                                <a href="/category/blog/">Blog </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="widget-title">Subscribe Us</h3>
+                <div class="group group--has-icon">
+                    <div class="group-item">
+                        <i class="fa fa-envelope"></i>
+                        <div class="group-item-label">
+                            <div>
+                                <a class="mailto-link" href="mailto:info@bestarion.com">info@bestarion.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #313b48;
+        }
+
+        /* Footer content */
+        .section-footer-content {
+            background-color: #313b48;
+            display: flex;
+            flex-flow: row wrap !important;
+            justify-content: space-between;
+            padding: 30px 0 100px 0;
+        }
+
+        .section-footer-content>div {
+            width: calc(25% - (.75*30px)) !important;
+            padding: 0 !important;
+        }
+
+        .section-footer-content .widget-title {
+            font-size: 21px;
+            border-left: 3px solid var(--primary-color);
+            font-weight: bold;
+            line-height: 24px;
+            color: #fff;
+            margin: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .section-footer-content .widget-title:first-letter {
+            color: var(--primary-color) !important;
+        }
+
+        .section-footer-content .group {
+            color: white;
+            font-size: 16px;
+        }
+
+        .section-footer-content .group a {
+            font-size: inherit !important;
+            color: inherit !important;
+            text-decoration: unset;
+        }
+
+        .section-footer-content .group a:hover {
+            text-decoration: underline;
+        }
+
+        .section-footer-content .group .group-item {
+            position: relative;
+            margin-bottom: 28px;
+        }
+
+        .section-footer-content .group .group-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-footer-content .group .group-item .group-item-label>div {
+            margin-top: 12px;
+        }
+
+        .section-footer-content .group .group-item .group-item-label>div:first-child {
+            margin-top: 0px;
+        }
+
+        .section-footer-content .group.group--has-icon .group-item>i {
+            font-size: inherit !important;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+
+        .section-footer-content .group.group--has-icon .group-item-label {
+            padding-left: 30px;
+        }
+
+        /* Subscribe us  */
+        .section-footer-content .emaillist {
+            color: inherit;
+            font-size: 16px;
+        }
+
+        .section-footer-content .emaillist * {
+            font-size: inherit !important;
+        }
+
+        .section-footer-content .emaillist .es_caption {
+            color: white;
+        }
+
+        .section-footer-content .emaillist .es-field-wrap label {
+            color: white;
+        }
+
+        .section-footer-content .emaillist .es_subscription_form_submit {
+            color: white;
+            background-color: var(--primary-color);
+            border-radius: 25px;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 991px) {
+            .section-footer-content {
+                padding: 30px 0 50px 0;
+            }
+
+            .section-footer-content>div {
+                width: calc(50% - 50px) !important;
+                margin-bottom: 35px !important;
+            }
+
+            .section-footer-content .panel-grid-cell {
+                padding-top: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .section-footer-content {
+                padding: 40px 0 50px 0;
+            }
+
+            .section-footer-content>div {
+                width: 100% !important;
+                margin-bottom: 25px !important;
+            }
+
+            .section-footer-content .group {
+                font-size: 13px;
+            }
+
+            .section-footer-content .emaillist {
+                color: inherit;
+                font-size: 13px;
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>

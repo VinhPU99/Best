@@ -1,0 +1,701 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <script src="../../libs/owl.carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../libs/owl.carousel/owl.carousel.css" />
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            /* background: #fcf2eb; */
+            background: white;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-3" id="servies">
+        <div class="wrap-title-inner">
+            <div class="title-inner">
+                <div class="sub-title">&nbsp;</div>
+                <div class="title">
+                    <span class="watermark">Service</span>
+                    <div>Array of Our Data Services</div>
+                </div>
+                <div class="description">
+                    <span class="hightlight">Bestarion's Data Services</span> help executives make their decision-making capabilities faster and more sophisticated. Businesses can create a competitive advantage by harnessing the power of data and analytics. Bestarion works with clients to strike the right balance between mind and machine to leverage data, understand risk, and gain a competitive edge.
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-1.png" alt="data-services-s3-icon-1" />
+                            </div>
+                            <div class="item--title">
+                                Data Entry
+                            </div>
+                            <div class="item--des">
+                                Our data entry option includes typists, transcribers, coders, and basic excel entry-makers to handle all of your data-entry related needs
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-2.png" alt="data-services-s3-icon-2" />
+                            </div>
+                            <div class="item--title">
+                                Data Cleansing
+                            </div>
+                            <div class="item--des">
+                                Data cleansing helps you clean up your company's records by eliminating mistakes, missing data, and inconsistencies. This makes your business more successful.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-3.png" alt="data-services-s3-icon-3" />
+                            </div>
+                            <div class="item--title">
+                                Data Migration
+                            </div>
+                            <div class="item--des">
+                                We are dedicated to excellence and will deliver an exhaustive and comprehensive approach to solving your database migration
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-4.png" alt="data-services-s3-icon-4" />
+                            </div>
+                            <div class="item--title">
+                                Data Analysis
+                            </div>
+                            <div class="item--des">
+                                Data analysis unravels the mysteries of your customer’s mind. It gives you a glimpse into the future, exploring past and present tendencies. No need for witchcraft, just pure math is what’s needed to be successful.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-5.png" alt="data-services-s3-icon-5" />
+                            </div>
+                            <div class="item--title">
+                                Data Mining
+                            </div>
+                            <div class="item--des">
+                                We will grab all those records from one or multiple source to a structural database format (ex. Excel, CSV, Text or SQL) depending on your data processing service requirement.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-6.png" alt="AAAAAAAA" />
+                            </div>
+                            <div class="item--title">
+                                Data Warehousing
+                            </div>
+                            <div class="item--des">
+                                Data warehouses power reports, dashboards, and analytics tools by storing data efficiently to minimize the input and output (I/O) of data and deliver query results quickly to hundreds and thousands of users concurrently.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="item wow fadeInUp">
+                            <div class="item--img">
+                                <img src="https://bestarion.com/wp-content/uploads/2022/12/data-services-s3-icon-1.png" alt="AAAAAAAA" />
+                            </div>
+                            <div class="item--title">
+                                Data Visualization
+                            </div>
+                            <div class="item--des">
+                                A picture is worth a thousand words. Data Visualization is the key to unlocking the true stories that your data has always wanted to tell. Interact with data effortlessly and flexibly with our data visualization solutions and services.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-3 .title-inner {
+            text-align: center;
+        }
+
+        .section-3 .title-inner .watermark {
+            left: 0 !important;
+            width: 100%;
+        }
+
+        .section-3 .title-inner .description {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            padding: 0 15px;
+        }
+
+        .section-3 .title-inner .hightlight {
+            color: var(--primary-color);
+        }
+
+        .section-3 .owl-carousel {
+            position: relative;
+            display: block;
+        }
+
+        /* nav */
+        .section-3 .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white !important;
+            color: var(--primary-color) !important;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            font-size: 10px;
+        }
+
+        .section-3 .owl-nav .owl-prev {
+            left: 0;
+        }
+
+        .section-3 .owl-nav .owl-next {
+            right: 0;
+        }
+
+        /* owl-stage-outer */
+        .section-3 .owl-stage {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            /* padding: 45px 0; */
+        }
+
+        .section-3 .owl-item {
+            padding: 15px;
+            width: 50% !important;
+        }
+
+        .section-3 .item {
+            display: flex;
+            flex-flow: column;
+            background: white;
+            border-radius: 15px;
+            min-height: 100%;
+            padding: 15px;
+        }
+
+        .section-3 .owl-item .item {
+            box-shadow: 0px 0px 15px 5px #D9D9D9;
+            ;
+        }
+
+        .section-3 .owl-item.active .item,
+        .section-3 .owl-item:hover .item {
+            box-shadow: 0px 0px 30px rgba(245, 130, 32, 0.4);
+        }
+
+        /* Content */
+        .section-3 .owl-item .item--img {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-3 .owl-item .item--img img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .section-3 .owl-item .item--title {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .section-3 .owl-item .item--des {
+            flex: 1 1;
+            text-align: center;
+            text-align: justify;
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+
+        .section-3 .owl-item .item--footer {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-3 .owl-item .item--footer a {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .section-3 .owl-item .item--footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        @media only screen and (min-width: 576px) {
+            .section-3 {
+                padding-bottom: 50px;
+            }
+
+            .section-3 .owl-carousel .owl-stage-outer {
+                overflow: unset;
+            }
+
+            .section-3 .owl-nav {
+                margin: 70px;
+            }
+
+            .section-3 .owl-nav {
+                display: none;
+            }
+
+            .section-3 .owl-stage {
+                width: unset !important;
+                transform: unset !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                margin: -12px;
+            }
+
+            .section-3 .owl-item.cloned {
+                display: none;
+            }
+
+            .section-3 .owl-item {
+                width: 50% !important;
+                padding: 12px;
+            }
+
+            .section-3 .owl-item.active .item,
+            .section-3 .owl-item .item {
+                border-radius: 15px;
+                border: 1px solid #fcf2eb;
+                padding: 30px;
+                box-shadow: 0px 4px 30px 1px rgba(217, 217, 217, 0.7);
+            }
+
+            /* Content */
+            .section-3 .owl-item .item--img img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .section-3 .owl-item .item--title {
+                font-size: 1.428rem;
+                margin-top: 20px;
+            }
+
+            .section-3 .owl-item .item--des {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+
+            .section-3 .owl-item .item--footer {
+                margin-top: 20px;
+            }
+
+            .section-3 .owl-item .item--footer a {
+                font-size: 1.142rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .section-3 {
+                padding-bottom: 70px;
+            }
+
+            .section-3 .title-inner br {
+                display: inline;
+            }
+
+            .section-3 .owl-stage {
+                margin: -30px;
+            }
+
+            .section-3 .owl-item.cloned {
+                display: none;
+            }
+
+            .section-3 .owl-item {
+                width: calc(100%/3) !important;
+                padding: 30px;
+            }
+
+            .section-3 .owl-item.active .item,
+            .section-3 .owl-item .item {
+                border-radius: 15px;
+                border: 1px solid #fcf2eb;
+                padding: 32px;
+                padding-bottom: 80px;
+            }
+
+            /* Content */
+            .section-3 .owl-item .item--img img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .section-3 .owl-item .item--title {
+                font-size: 1.5rem;
+                margin-top: 25px;
+            }
+
+            .section-3 .owl-item .item--des {
+                font-size: 1.142rem;
+                margin-top: 30px;
+            }
+
+            .section-3 .owl-item .item--footer {
+                margin-top: 24px;
+            }
+
+            .section-3 .owl-item .item--footer a {
+                font-size: 1.142rem;
+            }
+        }
+    </style>
+    <!-- <script>
+        // Owl carousel
+        $(function () {
+            var owl = $('.section-3 .owl-carousel');
+
+            owl.on('initialize.owl.carousel', function () {
+                owl.addClass('owl-loaded owl-drag owl-refresh');
+            });
+            owl.on('initialized.owl.carousel', function () {
+                setTimeout(function () {
+                    handleResize(true);
+                }, 500);
+            });
+
+            var allowedAutoplay = true;
+            var enabledAutoplay = false;
+            var smartSpeed = 1000;
+            var autoplaySpeed = 1000;
+            var autoplayTimeout = 5000;
+
+            owl.owlCarousel(
+                Object.assign(
+                    {
+                        margin: 0,
+                        nav: true,
+                        dots: false,
+                        items: 1,
+                        smartSpeed,
+                        loop: false,
+                        autoplay: false,
+                        autoplayHoverPause: true,
+                        navText: [
+                            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+                        ],
+                    },
+                    allowedAutoplay
+                        ? {
+                            loop: true,
+                            autoplaySpeed,
+                            autoplayTimeout,
+                        }
+                        : {}
+                )
+            );
+
+            function autoplayToggle(enable) {
+                if (!enable) {
+                    owl.trigger('stop.owl.autoplay');
+                }
+
+                var carousel = owl.data('owl.carousel');
+                // Auto play
+                carousel.settings.autoplay = enable; //don't know if both are necessary
+                carousel.options.autoplay = enable;
+
+                // // Drag
+                // carousel.settings.mouseDrag = !enable;
+                // carousel.options.mouseDrag = !enable
+                owl.trigger('refresh.owl.carousel');
+                enabledAutoplay = enable;
+            }
+
+            function handleResize(firstLoad) {
+                if (allowedAutoplay) {
+                    if (window.innerWidth >= 576) {
+                        if (enabledAutoplay || firstLoad === true) {
+                            autoplayToggle(false);
+                        }
+                    } else {
+
+                        if (!enabledAutoplay || firstLoad === true) {
+                            autoplayToggle(true);
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener('resize', handleResize);
+            window.hello = owl.data('owl.carousel');
+        });
+    </script> -->
+
+</body>
+
+</html>

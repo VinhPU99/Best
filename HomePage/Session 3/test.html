@@ -1,0 +1,1046 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <script src="../../libs/owl.carousel/owl.carousel.js"></script>
+    <link rel="stylesheet" href="../../libs/owl.carousel/owl.carousel.css" />
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background: #fcf2eb;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="section has-title-inner section-3" id="our-services">
+        <div class="title-inner">
+            <div class="sub-title">| Our Service</div>
+            <div class="title">
+                <span class="watermark">Service</span>
+                <div>What We Transform In Real Life</div>
+            </div>
+        </div>
+        <div class="layout-group">
+            <div class="owl-carousel">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Software Development
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Software development outsourcing</li>
+                                                <li>Custom Software Development</li>
+                                                <li>Web Application Development</li>
+                                                <li>Mobile App Development</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="/services/software-development/">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Software Testing
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            We provide testing and software quality consulting for any challenges, whether it involves building a testing team, defining a plan, or enhancing existing processes. We provide methodical foundations so that your team can freely operate and grow.
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Application Testing</li>
+                                                <li>Performance Testing</li>
+                                                <li>Automation Testing</li>
+                                                <li>Security Testing</li>
+                                                <li>Usability Testing</li>
+                                                <li>Accessibility Testing</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="#">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Data Services
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            Data Services help businesses harness the power of data to make their decision-making faster and more sophisticated. Bestarion works with clients to strike the right balance between mind and machine to leverage data and gain a competitive edge.
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Data Entry</li>
+                                                <li>Data Cleansing</li>
+                                                <li>Data Migration</li>
+                                                <li>Data Analysis</li>
+                                                <li>Data Mining</li>
+                                                <li>Data Warehousing</li>
+                                                <li>Data Visualization</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="/services/data-services/">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    DevOps
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            Bestarion can help you implement DevOps best practices such as cloud integration, CI/CD, GitOps, DevSecOps,... With Bestarion, a DevOps solution provider, you can automate and coordinate SDLC processes such as development, security, testing, and deployment.
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Continuous Integration and Continuous Delivery</li>
+                                                <li>Automated Testing</li>
+                                                <li>Infrastructure Management</li>
+                                                <li>Security Management (DevSecOps)</li>
+                                                <li>Cloud Expertise</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="/services/devops/">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Software Maintenance
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            Software maintenance services include not only customer support services such as customer care – support, guidance, and answering customer service during the customer using the software from after, deployed and put into operation, but are also continually evolving to provide software upgrade versions in accordance with customer business processes.
+                                        </p>
+                                        <p>Leverage our engineering, software maintenance, and support services to scale your teams and accelerate delivery quickly.</p>
+                                        <p>We support your application at all development lifecycle phases and seamlessly integrate with your existing teams.</p>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="0.8s">
+                                        <a href="/services/st">TALK TO OUR CONSULTANT &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Production support
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            Production support covers the practices and disciplines of supporting the IT systems/applications the end users are using. A production support person/team is responsible for monitoring the production servers, scheduled jobs, incident management and receiving incidents and requests from end-users, analyzing these and either responding to the end user with a solution or escalating it to the other IT teams. These teams may include developers, system
+                                            engineers and database administrators.
+                                        </p>
+                                        <p>
+                                            Bestarion provides production support worldwide, allowing you to offer round-the-clock coverage to your users. We are quality experts. Our hyper-focus on user experience ensures a minimized impact on your users when implementing bug fixes or platform maintenance.
+                                        </p>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="/services/staff-augmentation/">LET'S TALK &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Staff Augmentation
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            With the staff augmentation services, our team or technical talent becomes an integral component of your team. They engage themselves in your project, upholding your company's culture and aligning their efforts with your strategic objectives and in-house team.
+                                        </p>
+                                        <p>
+                                            Outsourcing Cooperation Models We Support
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Team Augmentation</li>
+                                                <li>Dedicated Team</li>
+                                                <li>Managed IT Service</li>
+                                                <li>Full project outsourcing</li>
+                                                <li>Build Operate Transfer</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="/services/staff-augmentation/">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="item">
+                                <div class="item-title wow fadeInRight" data-wow-delay="0.4s">
+                                    Business Process Outsourcing
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-description wow fadeInRight" data-wow-delay="0.6s">
+                                        <p>
+                                            Business process outsourcing services combine the power of technology with human ingenuity to handle everything. Bestarion assists clients in optimizing and transforming business processes to be more data-driven, allowing them to work smarter, scale faster, and cost-saving.
+                                        </p>
+                                    </div>
+                                    <div class="groups">
+                                        <div class="group wow fadeInRight" data-wow-delay="0.8s">
+                                            <ul class="list">
+                                                <li>Customer and technical support</li>
+                                                <li>Data entry and management</li>
+                                                <li>Medical billing and coding</li>
+                                                <li>Talent acquisition and development</li>
+                                                <li>Accounting and bookkeeping</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="actions wow fadeInRight" data-wow-delay="1s">
+                                        <a href="#">LEARN MORE &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-wrap">
+                <div class="menu-wrap">
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="0s">
+                        <div class="label">Software Development</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="label">Software Testing</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="0.4s">
+                        <div class="label">Data Services</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="0.8s">
+                        <div class="label">DevOps</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="1s">
+                        <div class="label">Software Maintenance</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="1.2s">
+                        <div class="label">Production support</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="1.4s">
+                        <div class="label">Staff Augmentation</div>
+                    </div>
+                    <div class="menu-item wow fadeInLeft" data-wow-delay="1.6s">
+                        <div class="label">Business Process Outsourcing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="test">
+            <ul>
+                <li>Software Development</li>
+                <li>Software Testing</li>
+                <li>Data Services</li>
+                <li>DevOps</li>
+                <li>Software Maintenance</li>
+                <li>Production support</li>
+                <li>Staff Augmentation</li>
+                <li>Business Process Outsourcing</li>
+            </ul>
+        </div>
+        <style>
+            .section-3 .owl-carousel .owl-item.transit.transit .wow,
+            .section-3 .owl-carousel .owl-item.transit.transit .wow * {
+                visibility: visible !important;
+            }
+
+            .section-3 .owl-carousel .owl-item:not(.active) .wow,
+            .section-3 .owl-carousel .owl-item:not(.active) .wow * {
+                visibility: hidden !important;
+                animation-name: none !important;
+                transition: none !important;
+            }
+
+            .section-3 .owl-carousel .owl-item.active .wow {
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                animation-duration: 1s;
+            }
+
+            .section-3 .layout-group {
+                position: relative;
+            }
+
+            .section-3 .menu-wrap {
+                display: none;
+            }
+
+            .section-3 .owl-carousel {
+                background: white;
+                width: 100%;
+                position: relative;
+            }
+
+            .section-3 .owl-carousel .owl-stage-outer {
+                box-shadow: 0px 4px 30px 1px rgba(217, 217, 217, 0.7);
+            }
+
+            .section-3 .owl-carousel .item-title {
+                color: var(--primary-color);
+                background-color: #FFF389;
+                padding: 10px 30px;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            .section-3 .owl-carousel .item-body {
+                padding: 20px 30px;
+            }
+
+
+            .section-3 .owl-carousel .item-description p {
+                margin-top: 0;
+                margin-bottom: 12px;
+                font-size: 1.3rem;
+                text-align: justify;
+            }
+
+            /* Group */
+            .section-3 .owl-carousel .groups {
+                display: flex;
+                flex-flow: column wrap;
+            }
+
+            .section-3 .owl-carousel .groups .group {
+                width: 100%;
+            }
+
+            .section-3 .owl-carousel ul {
+                list-style: none;
+                padding-left: 0px;
+                margin: 0;
+            }
+
+            .section-3 .owl-carousel ul li {
+                margin-bottom: 8px;
+                font-size: 1.3rem;
+                position: relative;
+                padding-left: 22px;
+            }
+
+            .section-3 .owl-carousel ul li::before {
+                content: ' ';
+                width: 7px;
+                height: 7px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                position: absolute;
+                top: 8px;
+                left: 0;
+
+            }
+
+            .section-3 .owl-carousel .actions {
+                margin-top: 40px;
+            }
+
+            .section-3 .owl-carousel .actions a {
+                color: var(--primary-color);
+                font-size: 1.3rem;
+                text-decoration: none;
+            }
+
+            .section-3 .owl-carousel a:hover {
+                text-decoration: underline;
+            }
+
+            .section-3 .owl-carousel .group:last-child li:last-child {
+                margin-bottom: 0px;
+            }
+
+
+            /* DOT */
+            .section-3 .owl-carousel .owl-nav {
+                display: none;
+            }
+
+            /* DOT */
+            .section-3 .owl-carousel .owl-dots {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .section-3 .owl-carousel button.owl-dot {
+                width: 7px;
+                height: 7px;
+                background: #D9D9D9 !important;
+                border-radius: 50%;
+                margin: 0 4px;
+            }
+
+            .section-3 .owl-carousel button.owl-dot.active {
+                background: #FE8421 !important;
+            }
+
+
+            @media only screen and (min-width: 768px) {
+
+                /* Layout */
+                .section-3 .layout-group {
+                    display: flex;
+                    justify-content: right;
+                }
+
+                .section-3 .menu-wrap {
+                    background: var(--primary-color);
+                    min-width: calc(400/1200 * 100%);
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    padding: 25px 0;
+                }
+
+                .section-3 .menu-wrap .menu-item {
+                    padding: 12px;
+                    color: white;
+                    position: relative;
+                    font-size: 1.357rem;
+                    cursor: pointer;
+                    position: relative;
+                    left: 10px;
+                }
+
+                .section-3 .menu-wrap .menu-item.active {
+                    padding: 12px;
+                    color: var(--primary-color);
+                    cursor: default;
+                    background: #FFF389;
+
+                }
+
+                .section-3 .menu-wrap .menu-item .label {
+                    z-index: 1;
+                    position: relative;
+                    font-size: 1.2rem;
+                }
+
+                .section-3 .owl-carousel {
+                    width: calc(980/1200 * 100%);
+                    padding-left: calc(280/1200 * 100%);
+                    margin-top: 25px;
+                    min-height: 300px;
+                    box-shadow: 0px 4px 30px 1px rgba(217, 217, 217, 0.7);
+                }
+
+                /* Carousel */
+                .section-3 .owl-carousel .owl-stage-outer {
+                    box-shadow: unset;
+                }
+
+                .section-3 .owl-carousel .owl-dots {
+                    display: none;
+                }
+
+                .section-3 .owl-carousel .item-title {
+                    background-color: unset;
+                    padding: 12px 20px 20px 0;
+                    text-align: left;
+                    font-size: 1.357rem;
+                }
+
+                .section-3 .owl-carousel .item-body {
+                    padding: 0 20px 36px 0;
+                }
+
+
+                .section-3 .owl-carousel .item-description p {
+                    margin-bottom: 16px;
+                    font-size: 1rem;
+                }
+
+                /* Group */
+                .section-3 .owl-carousel .groups {
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+
+                .section-3 .owl-carousel .groups .group {
+                    width: 100%;
+                }
+
+                .section-3 .owl-carousel .groups.groups--2 .group {
+                    width: 50%;
+                }
+
+                .section-3 .owl-carousel ul li {
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    padding-left: 22px;
+                }
+
+                .section-3 .owl-carousel ul li::before {
+                    width: 7px;
+                    height: 7px;
+                    top: 8px;
+                    left: 0;
+
+                }
+
+                .section-3 .owl-carousel .actions {
+                    margin-top: 65px;
+                }
+
+                .section-3 .owl-carousel a {
+                    font-size: 1.142rem;
+                }
+            }
+
+            @media only screen and (min-width: 992px) {
+                .section-3 .owl-carousel {
+                    min-height: 400px;
+                }
+
+                .section-3 .menu-wrap .menu-item {
+                    left: 20px;
+                }
+            }
+
+            @media only screen and (min-width: 1440px) {
+                .section-3 {
+                    margin-top: 90px;
+                }
+
+                .section-3 .menu-wrap {
+                    padding: 50px 0;
+                }
+
+                .section-3 .menu-wrap .menu-item {
+                    padding: 12px 14px;
+                    left: 45px;
+                }
+
+                .section-3 .menu-wrap .menu-item .label {
+                    font-size: 1.5rem;
+                }
+
+                .section-3 .owl-carousel {
+                    margin-top: 50px;
+                    min-height: 500px;
+                }
+
+                /* Carousel */
+
+                .section-3 .owl-carousel .item-title {
+                    padding: 35px 60px 20px 0;
+                    font-size: 1.5rem;
+                }
+
+                .section-3 .owl-carousel .item-body {
+                    padding: 0 60px 65px 0;
+                }
+
+
+                .section-3 .owl-carousel .item-description p {
+                    margin-bottom: 16px;
+                    font-size: 1.142rem;
+                }
+
+                /* Group */
+                .section-3 .owl-carousel ul li {
+                    margin-bottom: 10px;
+                    font-size: 1.142rem;
+                    padding-left: 40px;
+                }
+
+                .section-3 .owl-carousel ul li::before {
+                    width: 7px;
+                    height: 7px;
+                    top: 6px;
+                    left: 0;
+
+                }
+
+                .section-3 .owl-carousel a {
+                    font-size: 1.142rem;
+                }
+            }
+        </style>
+        <script>
+            // Owl carousel
+
+            $(function () {
+                var isInit = false;
+                var owl = $('.section-3 .owl-carousel');
+
+                owl.on('initialize.owl.carousel', function () {
+                    owl.addClass('owl-loaded owl-drag owl-refresh');
+                });
+
+                owl.on('initialized.owl.carousel', function () {
+                    if (!isInit) {
+                        setTimeout(function () {
+                            handleResize(true);
+                        }, 500);
+                    }
+                });
+
+                var carousel_nav_a = $('.section-3 .menu-wrap .menu-item');
+
+                carousel_nav_a.each(function (slide_index) {
+                    var $this = $(this);
+                    $this.attr('data-num', slide_index);
+                    $this.click(function (e) {
+                        owl.trigger('to.owl.carousel', [slide_index]);
+                    });
+                });
+
+                owl.on('changed.owl.carousel', function (event) {
+                    carousel_nav_a.removeClass('active');
+                    var index = event.page.index < 0 ? 0 : event.page.index;
+                    const itemEl = $('.section-3 .menu-wrap .menu-item[data-num=' + index + ']');
+                    if (itemEl) {
+                        itemEl.addClass('active');
+                    }
+                });
+
+                var allowedAutoplay = false;
+                var enabledAutoplay = false;
+                var allowedDrag = true;
+                var enableDrag = false;
+                var enabledAutoplay = false;
+                var smartSpeed = 1000;
+                var autoplaySpeed = 1000;
+                var autoplayTimeout = 5000;
+
+                owl.owlCarousel(
+                    Object.assign(
+                        {
+                            margin: 0,
+                            nav: true,
+                            dots: false,
+                            items: 1,
+                            smartSpeed,
+                            loop: false,
+                            autoplay: false,
+                            autoplayHoverPause: true,
+                            navText: [
+                                '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                                '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+                            ],
+                            animateOut: 'fadeOut',
+                            animateIn: 'fadeIn',
+                            dots: true,
+                            loop: true,
+                            autoHeight: true
+                        },
+                        allowedAutoplay
+                            ? {
+                                autoplay: true,
+                                autoplaySpeed,
+                                autoplayTimeout,
+                            }
+                            : {},
+                        // enableDrag ? {
+                        //     mouseDrag: true,
+                        //     touchDrag: true
+                        // } : {
+                        //     mouseDrag: false,
+                        //     touchDrag: false
+                        // }
+                    )
+                );
+
+                function autoplayToggle(enable) {
+                    if (!enable) {
+                        owl.trigger('stop.owl.autoplay');
+                    }
+
+                    var carousel = owl.data('owl.carousel');
+                    // Auto play
+                    carousel.settings.autoplay = enable; //don't know if both are necessary
+                    carousel.options.autoplay = enable;
+
+                    enabledAutoplay = enable;
+                }
+
+                function dragToggle(enable) {
+                    var carousel = owl.data('owl.carousel');
+
+                    carousel.settings.mouseDrag = enable;
+                    carousel.options.mouseDrag = enable;
+
+                    carousel.settings.touchDrag = enable;
+                    carousel.options.touchDrag = enable;
+                    // debugger;
+                    // var hasClass = owl.hasClass('owl-drag');
+                    // if (enable && !hasClass) {
+                    //     owl.addClass('owl-drag');
+                    // } else if (!enable && hasClass) {
+                    //     owl.removeClass('owl-drag');
+                    // }
+
+                    enableDrag = enable;
+                }
+
+                function handleResize(firstLoad) {
+                    if (firstLoad && !isInit) {
+                        isInit = true;
+                    }
+
+                    var changed = false;
+                    if (allowedAutoplay) {
+                        if (window.innerWidth >= 768) {
+                            if (enabledAutoplay || firstLoad === true) {
+                                autoplayToggle(false);
+                                changed = true;
+                            }
+                        } else {
+                            if (!enabledAutoplay || firstLoad === true) {
+                                autoplayToggle(false);
+                                changed = true;
+                            }
+                        }
+                    }
+                    if (allowedDrag) {
+                        if (window.innerWidth >= 768) {
+                            if (enableDrag || firstLoad === true) {
+                                dragToggle(false);
+                                changed = true;
+                            }
+                        } else {
+                            if (!enableDrag || firstLoad === true) {
+                                dragToggle(true);
+                                changed = true;
+                            }
+                        }
+                    }
+
+                    if (changed) {
+                        // owl.trigger('refresh.owl.carousel');
+                        var carousel = owl.data('owl.carousel');
+
+                        owl.trigger('destroy.owl.carousel');
+                        owl.owlCarousel(carousel.options);
+                    }
+                }
+
+                window.addEventListener('resize', handleResize);
+                window.carousel = owl.data('owl.carousel');
+                window.owl2 = owl;
+
+                var test = document.querySelectorAll('.test ul li')
+                test.forEach((i, n) => {
+                    i.onclick = (e) => {
+                        carousel_nav_a.each(function (slide_index) {
+                            var $this = $(this);
+                            // console.log(n === slide_index)
+                            if (n === slide_index) {
+                                console.log(slide_index)
+                                $this.trigger('click')
+                            } else {
+                                return 1;
+                            }
+                        });
+                    }
+                })
+                var listItem = document.querySelectorAll('#menu-item-211 >ul > li')
+                listItem.forEach((i, n) => {
+                    i.onclick = (e) => {
+                        carousel_nav_a.each(function (slide_index) {
+                            var $this = $(this);
+                            // console.log(n === slide_index)
+                            if (n === slide_index) {
+                                $this.trigger('click')
+                            } else {
+                                return 1;
+                            }
+                        });
+                    }
+                })
+            });
+        </script>
+</body>
+
+</html>

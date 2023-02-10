@@ -1,0 +1,245 @@
+<div class="section-3">
+    <div class="steps">
+        <div class="a-step-column">
+            <div class="section-3-title">
+                Follow Easy 4 Step
+            </div>
+            <div class="a-steps ">
+                <p class="a-steps_number">
+                    1
+                </p>
+                <div class="a-steps_content">
+                    <div class="a-steps_name">
+                        Fill in the application form
+                    </div>
+                    <div class="a-steps_description">
+                        Candidates fill in the application form that we provide. Then we will screen your CV and Academic Transcript and tell you if you fit our requirements.
+                    </div>
+                </div>
+                <div class="a-steps_line"></div>
+            </div>
+            <div class="a-steps ">
+                <p class="a-steps_number">
+                    2
+                </p>
+                <div class="a-steps_content">
+                    <div class="a-steps_name">
+                        Online Interview
+                    </div>
+                    <div class="a-steps_description">
+                        The online interview with Bestarion is about 30-60 minutes. We will discuss your technical abilities & soft skills.
+                    </div>
+                </div>
+                <div class="a-steps_line"></div>
+            </div>
+            <div class="a-steps ">
+                <p class="a-steps_number">
+                    3
+                </p>
+                <div class="a-steps_content">
+                    <div class="a-steps_name">
+                        Waiting for your results
+                    </div>
+                    <div class="a-steps_description">
+                        Within 3 days, Bestarion will inform your interview result. We are in fact beyond thrilled for you!
+                    </div>
+                </div>
+                <div class="a-steps_line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="/wp-content/uploads/2022/07/intern-s3-img.png" alt="intern-s3-img" />
+    </div>
+</div>
+<style>
+    .section-3 {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .section-3 .steps {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .section-3 .banner {
+        width: 50%;
+        display: none;
+        align-items: center;
+        padding-left: 50px;
+    }
+
+    .section-3 .banner img {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .section-3 .steps {
+            width: 50%;
+        }
+
+        .section-3 .banner {
+            display: flex;
+        }
+    }
+
+    .a-step-column .section-3-title {
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .a-step-column .a-steps_wrap.only-description .a-steps {
+        padding-bottom: 5px
+    }
+
+    .a-step-column .a-steps {
+        display: flex;
+        max-width: 100%;
+        padding-bottom: 30px;
+        position: relative;
+
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start
+    }
+
+    @media only screen and (min-width: 768px) {
+        .a-step-column .a-steps {
+            flex-direction: row;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .a-step-column .a-steps {
+            flex-direction: row;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .a-step-column .section-3-title {
+            text-align: left;
+        }
+    }
+
+    .a-step-column .a-steps_name {
+        margin: 10px 0 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .a-step-column .a-steps_description {
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .a-step-column .a-steps_name {
+            font-size: 1.2rem
+        }
+
+        .a-step-column .a-steps_description {
+            font-size: 1.1rem;
+        }
+    }
+
+    .a-step-column .a-steps_number {
+        min-width: 40px;
+    }
+
+    .a-step-column .a-steps:hover .a-steps_number {
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color)
+    }
+
+    .a-step-column .a-steps .a-steps_line {
+        left: 20px;
+    }
+
+    .a-step-column .a-steps:hover .a-steps_line:after {
+        height: 100%
+    }
+
+    .a-step-column .a-steps:last-child .a-steps_line {
+        display: none
+    }
+
+    .a-step-column .a-steps_line {
+        background: #dadfe3;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        z-index: -1
+    }
+
+    @media only screen and (max-width: 767px) {
+        .a-step-column .a-steps_line {
+            display: none
+        }
+    }
+
+    .a-step-column .a-steps_line:after {
+        background-color: var(--primary-color);
+        bottom: 0;
+        content: "";
+        display: none;
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: all .7s ease;
+        width: 1px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .a-step-column .a-steps_line:after {
+            display: block;
+        }
+    }
+
+    .a-step-column .a-steps_number {
+        background: #fff;
+        border: 1px solid #dadfe3;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        height: 40px;
+        line-height: 1;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding: 10px 14px;
+        text-align: center;
+        transition: all .3s ease;
+        white-space: nowrap
+    }
+
+    @media only screen and (min-width: 768px) {
+        .a-step-column .a-steps_number {
+            margin-bottom: 0;
+        }
+    }
+
+    .a-step-column .a-steps_content {
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%
+    }
+
+    @media only screen and (min-width: 768px) {
+        .a-step-column .a-steps_content {
+            margin-left: 0;
+            margin-left: 20px;
+        }
+    }
+</style>

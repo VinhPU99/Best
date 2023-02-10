@@ -1,0 +1,518 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background: #fcf2eb;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section has-title-inner section-5" id="technology">
+        <div class="wrap-title-inner">
+            <div class="title-inner">
+                <div class="sub-title">&nbsp;</div>
+                <div class="title">
+                    <span class="watermark">Technology</span>
+                    <div>Technologies We Use</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-tab">
+            <div class="tab-content">
+                <div class="tab-content-wrap">
+                    <div name="data-service" class="tabcontent active">
+                        <div class="tabcontent-content">
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/08/PostgreSQL.png" alt="PostgreSQL">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>PostgreSQL</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">PostgreSQL</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/08/MySQL.png" alt="MySQL">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>MySQL</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">MySQL</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/08/SQL-Server.png" alt="SQL-Server">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>SQL Server</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">SQL Server</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/12/Web-Scraper.png" alt="Web-Scraper">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Web Scraper</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Web Scraper</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/12/Dbeaver.png" alt="Dbeaver">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Dbeaver</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Dbeaver</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/08/Ruby-on-Rails.png" alt="Ruby-on-Rails">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Ruby on Rails</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Ruby on Rails</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/12/Python.png" alt="Python">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Python</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Python</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/08/Golang.png" alt="Golang">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Golang</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Golang</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/12/Power-BI.png" alt="Power-BI">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Power BI</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Power BI</div>
+                            </div>
+                            <div class="technical">
+                                <div class="img-wrap tooltip">
+                                    <img src="https://bestarion.com/wp-content/uploads/2022/12/Excel.png" alt="Excel">
+                                    <span class="tooltiptext tooltip-top">
+                                        <div>Excel</div>
+                                    </span>
+                                </div>
+                                <div class="technical-name">Excel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-5 {
+            padding-bottom: 50px;
+        }
+
+        .section-5 .wrap-tab {
+            max-width: 900px;
+            margin: auto;
+        }
+
+
+        /* Style the tab content */
+        .section-5 .tab-content {
+            overflow: initial !important;
+        }
+
+        .section-5 .tab-content-wrap {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+        }
+
+        .section-5 .tab-content-wrap .tabcontent {
+            width: 100%;
+            display: none;
+            padding: 6px 12px;
+        }
+
+        .section-5 .tab-content-wrap .tabcontent.active {
+            display: block;
+        }
+
+        .section-5 .tab-content-wrap .tabcontent .tabcontent-content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .section-5 .tabcontent .group-technical {
+            width: 100%;
+        }
+
+        .section-5 .group-technical-wrap {
+            display: flex;
+            flex-flow: column wrap;
+            margin: 20px;
+        }
+
+        .section-5 .tabcontent .group-technical .group-technical__title {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .section-5 .tabcontent .group-technical .group-technical__content {
+            margin-top: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        /* no group */
+        .section-5 .tabcontent .technical {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .section-5 .tabcontent .technical .technical-name {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        .section-5 .tab-content-wrap .technical .img-wrap {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            margin: 0 10px;
+            box-shadow: 0px 0px 15px 5px #D9D9D9;
+        }
+
+        .section-5 .tab-content-wrap .technical .img-wrap img {
+            width: 48px;
+            height: 48px;
+        }
+
+        /* has group */
+        .section-5 .tab-content-wrap .group-technical .technical .img-wrap {
+            width: 56px;
+            height: 56px;
+        }
+
+        .section-5 .tab-content-wrap .group-technical .technical .img-wrap img {
+            width: 36px;
+            height: 36px;
+        }
+
+        @media screen and (min-width: 576px) {
+            .section-5 {
+                padding-bottom: 70px;
+            }
+
+            .section-5 .tabcontent .technical .img-wrap {
+                width: 80px;
+                height: 80px;
+            }
+
+            .section-5 .tab-content-wrap .technical .img-wrap img {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* has group */
+            .section-5 .tab-content-wrap .group-technical .technical .img-wrap {
+                width: 64px;
+                height: 64px;
+            }
+
+            .section-5 .tab-content-wrap .group-technical .technical .img-wrap img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .section-5 {
+                padding-bottom: 90px;
+            }
+
+            .section-5 .tabcontent .group-technical {
+                width: 50%;
+            }
+
+            .section-5 .tabcontent .technical .technical-name {
+                margin-top: 15px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .section-5 .tabcontent .group-technical {
+                width: 50%;
+            }
+
+            .section-5 .tabcontent .technical {
+                margin: 35px;
+            }
+        }
+    </style>
+</body>
+
+</html>

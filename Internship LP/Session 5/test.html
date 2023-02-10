@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {}
+
+        .section-4 {
+            max-width: 1200px;
+            margin: auto;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-5">
+        <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/intern-s5-img.png" alt="intern-s5-img" />
+        <div class="content wow fadeInUp">
+            <div class="content-title">We Help To Build Your Dream</div>
+            <div class="content-des">By the end of the internship, we will provide an employment offer to the best performing candidates</div>
+            <div class="wrap-btn">
+                <a class="btn" href="https://forms.gle/RLNW9FACGCeAGUab9">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-5 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .section-5 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .section-5 .content {
+            max-width: 1200px;
+            text-align: center;
+            position: absolute;
+            top: 30%;
+        }
+
+        .section-5 .content .content-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .section-5 .content .content-des {
+            font-size: 1.3rem;
+        }
+
+        .section-5 .btn {
+            font-size: 1.4rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            /* background: linear-gradient(125deg, rgba(245, 103, 32, 1) 0%, rgba(249, 190, 96, 1) 77%); */
+            background-color: var(--primary-color);
+            animation: pulse 2.5s infinite;
+        }
+    </style>
+</body>
+
+</html>

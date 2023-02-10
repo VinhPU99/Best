@@ -1,0 +1,374 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap'); */
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {}
+
+        .section-9 {
+            /* display: inline-block; */
+            max-width: 1200px;
+            margin: auto;
+            /* background: gray; */
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-9">
+        <div class="wrp-collapse">
+            <div class="t-collapse">
+                <div class="t-collapse-item wow fadeInLeft" data-key="1">
+                    <div class="t-collapse-header">
+                        <div class="t-collapse-header-text">
+                            What is Staff Augmentation
+                        </div>
+                        <span class="t-collapse-arrow">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="t-collapse-content">
+                        <div class="t-collapse-content-box">
+                            Staff augmentation is an outsourcing model when a company hires outside developers to add to its team temporarily, needs specialized skills that it doesn't have in-house, or wants to quickly make a minimum viable product.
+                        </div>
+                    </div>
+                </div>
+                <div class="t-collapse-item wow fadeInLeft" data-key="2">
+                    <div class="t-collapse-header">
+                        <div class="t-collapse-header-text">
+                            What is the difference between staff augmentation and full project outsourcing?
+                        </div>
+                        <span class="t-collapse-arrow">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="t-collapse-content">
+                        <div class="t-collapse-content-box">
+                            With augmented teams, you hire additional IT experts with direct oversight of your team. Thus, you do not share the risks related to a potential unfavorable consequence. In the outsourcing model, you assign outsourced developers to achieve a specific objective, while sharing the associated risks with your outsourcing provider. In addition, outsourcing decreases the level of control.
+                        </div>
+                    </div>
+                </div>
+                <div class="t-collapse-item wow fadeInLeft" data-key="3">
+                    <div class="t-collapse-header">
+                        <div class="t-collapse-header-text">
+                            Who use Staff Augmentation
+                        </div>
+                        <span class="t-collapse-arrow">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="t-collapse-content">
+                        <div class="t-collapse-content-box">
+                            This way of hiring is popular with businesses that need temporary workers to fill short-term positions. Due to a lack of IT talent worldwide, custom software development is the most requested task for augmented teams.
+                        </div>
+                    </div>
+                </div>
+                <div class="t-collapse-item wow fadeInLeft" data-key="4">
+                    <div class="t-collapse-header">
+                        <div class="t-collapse-header-text">
+                            Why is Staff Augmentation important?
+                        </div>
+                        <span class="t-collapse-arrow">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="t-collapse-content">
+                        <div class="t-collapse-content-box">
+                            IT Staff Augmentation helps companies keep up with market changes and fill talent gaps. Unlike traditional hiring, augmented teams let companies maintain flexibility while reducing operating costs. Also, business owners have higher control over hires who join their on-site staff.
+                        </div>
+                    </div>
+                </div>
+                <div class="t-collapse-item wow fadeInLeft" data-key="5">
+                    <div class="t-collapse-header">
+                        <div class="t-collapse-header-text">
+                            Can I hire one developer or do I need to hire the whole team?
+                        </div>
+                        <span class="t-collapse-arrow">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="t-collapse-content">
+                        <div class="t-collapse-content-box">
+                            Bestarion meets all of your hiring needs. As a result, you can either augment your on-site team with individuals or assign an entire team to deliver your project.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Collapse
+        $(function () {
+            var collapseName = '.t-collapse';
+            var $collapse = $(collapseName);
+            var isMulti = $collapse.hasClass('multi');
+            var isTransiting = false;
+            var speed = 400;
+
+            var $collapseItems = $collapse.find('.t-collapse-item');
+
+            function toggleClass($i) {
+                if ($i.hasClass('active')) {
+                    $i.removeClass('active');
+                } else {
+                    $i.addClass('active');
+                }
+            }
+
+            function toggleCollapse($i, $h, isInit, checkTransition) {
+                if (!isInit) {
+                    toggleClass($i);
+                }
+
+                $c = $h.next();
+                $c.slideToggle(speed, function () {
+                    if (checkTransition) {
+                        isTransiting = false;
+                    }
+                });
+            }
+
+            function toggleOther(exclude) {
+                var $actives = $collapse.find('.t-collapse-item.active');
+
+                $actives.each(function () {
+                    var $this = $(this);
+                    if ($this.data('key') !== exclude.data('key')) {
+                        var $header = $this.find('.t-collapse-header');
+                        toggleCollapse($this, $header, false, false);
+                    }
+                });
+            }
+
+            $collapseItems.each(function () {
+                var $this = $(this);
+                var $header = $this.find('.t-collapse-header');
+
+                $header.click(function (e) {
+                    if (isTransiting === false) {
+                        isTransiting = true;
+                        if (isMulti) {
+                            toggleCollapse($this, $header, false, true);
+                        } else {
+                            toggleOther($this);
+                            toggleCollapse($this, $header, false, true);
+                        }
+                    }
+                });
+            });
+
+            (function () {
+                // init collapse
+                var $actives = $collapse.find('.t-collapse-item.active');
+                $actives.each(function (index) {
+                    console.log(index);
+                    if (!isMulti && index > 0) {
+                        return;
+                    }
+                    var $this = $(this);
+                    var $header = $this.find('.t-collapse-header');
+                    toggleCollapse($this, $header, true, false);
+                });
+            })();
+        });
+    </script>
+    <style>
+        .t-collapse {
+            max-width: 750px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .t-collapse .t-collapse-item {
+            border-bottom: 1px solid #d3d3d3;
+        }
+
+        .t-collapse .t-collapse-header {
+            padding: 15px 0px 15px 0px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .t-collapse .t-collapse-header .t-collapse-header-text {
+            flex: 1 1;
+            font-size: 1.7rem;
+        }
+
+        .t-collapse .t-collapse-header .t-collapse-arrow {
+            display: inline-block;
+            margin-left: 32px;
+        }
+
+        .t-collapse .t-collapse-header .t-collapse-arrow i {
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: all 0.4s ease-out 0s;
+        }
+
+        .t-collapse .t-collapse-content {
+            width: 100%;
+            padding: 0px 15px 15px 0px;
+            display: none;
+        }
+
+        .t-collapse .t-collapse-content-box {
+            font-size: 1.5rem;
+        }
+
+        .t-collapse-item.active .t-collapse-header .t-collapse-arrow i {
+            transform: rotate(180deg);
+        }
+
+        .t-collapse-item.active .t-collapse-header {
+            color: var(--primary-color);
+            transition: all 0.2s ease-out 0s;
+        }
+
+        .t-collapse .t-collapse-content-box ul {
+            list-style-type: '✔';
+        }
+
+        .t-collapse .t-collapse-content-box ul li {
+            padding-left: 12px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .t-collapse {
+                padding: 0;
+            }
+
+            .t-collapse-item .t-collapse-header .t-collapse-arrow i {
+                font-size: 32px;
+            }
+
+            .t-collapse .t-collapse-header .t-collapse-header-text {
+                font-size: 1.285rem;
+            }
+
+            .t-collapse .t-collapse-content-box {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

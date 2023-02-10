@@ -1,0 +1,233 @@
+<div class="section has-title-inner section-6" id="Process">
+    <div class="wrap-title-inner">
+        <div class="title-inner">
+            <div class="sub-title">&nbsp;</div>
+            <div class="title">
+                <span class="watermark">Benefit</span>
+                <div>Our Software Development Outsourcing Process</div>
+            </div>
+        </div>
+    </div>
+    <div class="development-timeline">
+
+        <div class="development-timeline__row">
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    01
+                </div>
+                <span class="development-timeline__title">Introduction Meeting</span>
+                <p class="development-timeline__description">
+                    The first step is to schedule an introductory meeting so we can get to know each other and learn more about your project.
+                </p>
+            </div>
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    02
+                </div>
+                <span class="development-timeline__title">Project Assessment</span>
+                <p class="development-timeline__description">
+                    Once we better understand your project, our team will assess its feasibility and scope.
+                </p>
+            </div>
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    03
+                </div>
+                <span class="development-timeline__title">Proposal</span>
+                <p class="development-timeline__description">
+                    After the assessment, we’ll put together a proposal that outlines our approach, timeline, and cost estimate.
+                </p>
+            </div>
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    04
+                </div>
+                <span class="development-timeline__title">Team Composition</span>
+                <p class="development-timeline__description">
+                    Once the proposal is approved, we’ll start putting together a team of developers with the right skills and experience for your project.
+                </p>
+            </div>
+        </div>
+        <div class="development-timeline__row">
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    05
+                </div>
+                <span class="development-timeline__title">Development</span>
+                <p class="development-timeline__description">
+                    Our developers will start the project according to the agreed-upon timeline and budget. Our QA team will also test the software to ensure quality.
+                </p>
+            </div>
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    06
+                </div>
+                <span class="development-timeline__title">Deployment</span>
+                <p class="development-timeline__description">
+                    Once the software is finished, we’ll help you deploy it to your servers or cloud provider of choice.
+                </p>
+            </div>
+            <div class="development-timeline__item wow fadeInUp">
+                <div class="development-timeline__round">
+                    07
+                </div>
+                <span class="development-timeline__title">Maintenance and Support</span>
+                <p class="development-timeline__description">
+                    After deployment, we’ll be available for ongoing maintenance and support. We can also help you with future enhancements and upgrades.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row-action-center">
+        <a class="ghost" href="#">Schedule a Kick-Off Meeting →</a>
+    </div>
+</div>
+<style>
+    .section-6 {
+        padding-bottom: 50px;
+    }
+
+    .section-6 .wrap-title-inner {
+        text-align: center;
+        margin: auto;
+    }
+
+    .section-6 .title-inner .watermark {
+        width: 100%;
+    }
+
+    .section-6 .row-action-center a {
+        border-radius: 25px;
+    }
+
+    /* Process */
+    .development-timeline {
+        width: 100%;
+    }
+
+    .development-timeline__row {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        max-width: 94vw;
+    }
+
+    .development-timeline__item {
+        width: 100%;
+        position: relative;
+        padding-left: 100px;
+        padding-bottom: 48px;
+    }
+
+    .development-timeline__round {
+        background-color: var(--primary-color);
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+        font-weight: 700;
+        color: white;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .development-timeline__title {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 24px;
+        color: #0b0b15;
+        padding-bottom: 8px;
+    }
+
+    .development-timeline__description {
+        color: #515c6a;
+        margin-top: 8px;
+        font-size: 1.3rem;
+        line-height: 18px;
+    }
+
+    .development-timeline__item:after {
+        content: " ";
+        width: 1px;
+        border-left: 2px solid var(--primary-color);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 28px;
+        z-index: -1;
+    }
+
+    .development-timeline__row:not(:first-of-type) .development-timeline__item:last-of-type::after {
+        display: none;
+    }
+
+    @media (min-width: 1200px) {
+        .development-timeline__row {
+            justify-content: space-between;
+            flex-flow: row nowrap;
+        }
+
+        .development-timeline__row:first-of-type {
+            padding-left: 40px;
+        }
+
+        .development-timeline__row:before {
+            content: "";
+            width: 100%;
+            height: 310px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            /* z-index: -1; */
+        }
+
+        .development-timeline__item {
+            padding-left: unset;
+            padding-right: 40px;
+        }
+
+        .development-timeline__item::after {
+            display: none;
+        }
+
+        .development-timeline__round {
+            position: relative;
+        }
+
+        .development-timeline__description {
+            text-align: justify;
+        }
+
+        /* first */
+        .development-timeline__row:first-of-type:before {
+            background-image: url('https://bestarion.com/wp-content/uploads/2023/01/software-development-s6-bg-1.png');
+            top: 25px;
+        }
+
+        .development-timeline__row:first-of-type .development-timeline__item {
+            padding-right: 24px;
+        }
+
+        /* not first */
+        .development-timeline__row:nth-of-type(2) {
+            padding-left: 120px;
+            margin-top: 100px;
+        }
+
+        .development-timeline__row:nth-of-type(2):before {
+            background-image: url('https://bestarion.com/wp-content/uploads/2023/01/software-development-s6-bg-2.png');
+            top: -265px;
+        }
+
+        .development-timeline__row:nth-child(2) .development-timeline__item {
+            padding-right: 70px;
+        }
+    }
+</style>

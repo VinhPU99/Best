@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background: gray;
+        }
+
+        .section-3 {
+            max-width: 1200px;
+            margin: auto;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-section">
+        <div class="banner-section-wrap">
+            <div class="banner-background">
+                <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/intern-banner-1.png" alt="b1" />
+            </div>
+            <div class="banner-container">
+                <div class="banner__p1">
+                    Become a Part of
+                </div>
+                <div class="banner__p2">
+                    Bestarion Team
+                </div>
+                <div class="banner__p3">
+                    Your dream team and dream job are here. Join our team now.
+                </div>
+                <div>
+                    <a class="banner__start-btn" href="#pl-7261">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="banner-background">
+            <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/intern-banner-2.png" alt="b2" />
+        </div>
+    </div>
+    <style>
+        .banner-section {}
+
+        .banner-section-wrap {
+            position: relative;
+        }
+
+
+        .banner-background img {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-background .bg-el {
+            position: absolute;
+        }
+
+        .banner-background .bg-el.bg-el-1 {
+            top: 0;
+            right: 0;
+            right: -2%;
+            width: 27%;
+        }
+
+        .banner-background .bg-el.bg-el-2 {
+            bottom: 0;
+            left: 0;
+            left: -12%;
+            width: 42%;
+        }
+
+        .banner-container {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .banner-container .banner__p1 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .banner-container .banner__p2 {
+            margin-top: 8px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .banner-container .banner__p3 {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .banner-container .banner__start-btn {
+            background: #ff914d;
+            margin-top: 20px;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+            color: white;
+            cursor: pointer;
+            animation: pulse 2.5s infinite;
+            text-decoration: unset;
+        }
+
+        .banner-container .banner__start-btn:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        @media only screen and (min-width: 576px) {
+            .banner-container {
+                width: 48%;
+                top: 50%;
+                left: 5%;
+                transform: translateY(-50%);
+                text-align: left;
+            }
+
+            .banner-container .banner__p1 {
+                font-size: 1.3rem;
+            }
+
+            .banner-container .banner__p2 {
+                font-size: 1.9rem;
+            }
+
+            .banner-container .banner__p3 {
+                font-size: 0.9rem;
+            }
+
+            .banner-container .banner__start-btn {
+                padding: 8px 16px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .banner-container {
+                width: 40%;
+                top: 50%;
+                left: 10%;
+
+            }
+
+            .banner-container .banner__p1 {
+                font-size: 1.53rem;
+            }
+
+            .banner-container .banner__p2 {
+                font-size: 2.5rem;
+            }
+
+            .banner-container .banner__p3 {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media only screen and (min-width: 1366px) {
+            .banner-container .banner__p1 {
+                font-size: 1.5rem;
+            }
+
+            .banner-container .banner__p2 {
+                font-size: 4.5rem;
+            }
+
+            .banner-container .banner__p3 {
+                font-size: 0.9rem;
+            }
+
+
+            .banner-container .banner__start-btn {
+                margin-top: 32px;
+            }
+        }
+
+        @media only screen and (min-width: 1366px) {
+            .banner-container {
+                width: 50%;
+            }
+
+            .banner-container .banner__p1 {
+                font-size: 2.5rem;
+            }
+
+            .banner-container .banner__p2 {
+                font-size: 4.5rem;
+            }
+
+            .banner-container .banner__p2 {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {}
+
+        .section-4 {
+            max-width: 1200px;
+            margin: auto;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-4">
+        <div class="item item--work">
+            <div class="item-content">
+                <div class="item-title">
+                    <span class="img-wrap">
+                        <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Work.png" alt="Work" />
+                    </span>
+                    <div class="text">Work</div>
+                </div>
+                <div class="item-des">
+                    <ul class="list-benefit-detail">
+                        <li class="benefit-detail">
+                            Flexible working hours
+                        </li>
+                        <li class="benefit-detail">
+                            Clear leadership
+                        </li>
+                        <li class="benefit-detail">
+                            Good career advancement opportunities
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item item--education">
+            <div class="item-content">
+                <div class="item-title">
+                    <span class="img-wrap">
+                        <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Education.png" alt="Education" />
+                    </span>
+                    <div class="text">Education</div>
+                </div>
+                <div class="item-des">
+                    <ul class="list-benefit-detail">
+                        <li class="benefit-detail">
+                            Mentorship program
+                        </li>
+                        <li class="benefit-detail">
+                            Many various training, best practices, and soft skills
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item item--entertainment">
+            <div class="item-content">
+                <div class="item-title">
+                    <span class="img-wrap">
+                        <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Entertainment.png" alt="Entertainment" />
+                    </span>
+                    <div class="text">Entertainment</div>
+                </div>
+                <div class="item-des">
+                    <ul class="list-benefit-detail">
+                        <li class="benefit-detail">
+                            Awesome clubs: music, yoga, badminton, football, etc
+                        </li>
+                        <li class="benefit-detail">
+                            Lots of monthly internal activities
+                        </li>
+                        <li class="benefit-detail">
+                            Company trip, annual year-end party team building, etc
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item item--bonus">
+            <div class="item-content">
+                <div class="item-title">
+                    <span class="img-wrap">
+                        <img src="https://staging.bestarion.com/wp-content/uploads/2022/07/Bonus.png" alt="Bonus" />
+                    </span>
+                    <div class="text">Bonuses</div>
+                </div>
+                <div class="item-des">
+                    <ul class="list-benefit-detail">
+                        <li class="benefit-detail">
+                            Vacation
+                        </li>
+                        <li class="benefit-detail">
+                            Lunch allowance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-4 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .section-4 .item {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .section-4 .item-content {
+            position: relative;
+            background: white;
+            padding: 20px;
+            height: 100%;
+            border-radius: 6px;
+        }
+
+        .section-4 .item-content .item-title {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: -10px;
+        }
+
+        .section-4 .item-title .img-wrap {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+        }
+
+        .section-4 .item-title .img-wrap img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-4 .item-title .text {
+            flex: 1 1 auto;
+            margin-top: 20px;
+        }
+
+        .section-4 .item-content .item-des {
+            font-size: 1.5rem;
+        }
+
+        .section-4 ul {
+            padding: 0;
+            margin: 0;
+            padding-left: 14px;
+            list-style-type: none;
+        }
+
+        .section-4 ul li {
+            margin-top: 16px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-4 ul li::before {
+            content: " ";
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: block;
+            background: var(--primary-color);
+        }
+
+        .section-4 ul li .benefit {
+            font-size: 1rem;
+            flex: 1 1 auto;
+        }
+
+        @media screen and (min-width: 576px) {
+            .section-4 .item {
+                width: 50%;
+            }
+
+            .section-4 .item-content .item-title {
+                font-size: 1.3rem;
+            }
+
+            .section-4 .item-title .text {
+                margin-top: 12px;
+            }
+
+            .section-4 .item-title .img-wrap {
+                width: 50px;
+                height: 50px;
+            }
+
+            .section-4 .item-content .item-des {
+                font-size: 1rem;
+            }
+
+            .section-4 ul {
+                padding-left: 10px;
+            }
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<style>
+    .contact-box+.footer-box .section-footer-social {
+        padding-top: 100px;
+    }
+
+    /* Footer content */
+    .section-contact-us {
+        background-color: white;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 90px !important;
+        display: flex;
+        flex-flow: row wrap !important;
+        justify-content: space-between;
+        position: relative;
+        top: 100px;
+    }
+
+    .section-contact-us>div {
+        width: calc(50% - 1/2*50px) !important;
+        padding: 0 !important;
+    }
+
+    /* Left */
+    .section-contact-us .contact-guide {}
+
+    .section-contact-us .contact-guide .contact-guide--title {
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .section-contact-us .contact-guide ul {
+        list-style-type: decimal;
+        padding-left: 20px;
+        margin-top: 55px;
+    }
+
+    .section-contact-us .contact-guide ul li {
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .section-contact-us .contact-guide ul li:first-child {
+        margin-top: 0 !important;
+    }
+
+    /* contact-form-wrap */
+    .section-contact-us .contact-form-wrap {
+        padding: 30px 30px 50px 30px;
+        background-color: var(--primary-color);
+    }
+
+    .section-contact-us .contact-form-title {
+        font-size: 21px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
+
+    .section-contact-us .everest-forms {
+        margin-top: 30px;
+    }
+
+    .section-contact-us .everest-forms .evf-container {
+        margin: 0;
+    }
+
+    .section-contact-us .everest-forms .evf-field-container .evf-frontend-row textarea {
+        height: 65px;
+    }
+
+    .section-contact-us .contact-input-policy label {
+        color: black !important;
+    }
+
+    .section-contact-us .contact-input-policy input[type=checkbox] {
+        margin-top: 0;
+    }
+
+    .section-contact-us .contact-input-policy a {
+        color: white !important;
+    }
+
+    .section-contact-us .contact-input-policy a:hover {
+        text-decoration: underline;
+    }
+
+    .section-contact-us .evf-submit-container button {
+        background: #FFFFFF !important;
+        color: var(--primary-color);
+        border-radius: 5px;
+        border: none !important;
+        margin: 0;
+    }
+
+    .section-contact-us .evf-recaptcha-container {
+        padding: 0 15px;
+    }
+
+    /* Responsive */
+    @media only screen and (max-width: 992px) {
+        .contact-box+.footer-box .section-footer-social {
+            padding-top: 80px;
+        }
+
+        .section-contact-us {
+            padding: 40px 16px !important;
+        }
+
+        .section-contact-us.section-contact-us>div {
+            width: calc(50% - 1/2*20px) !important;
+        }
+
+        /* .section-contact-us .panel-grid-cell {
+            padding-top: 50px;
+        } */
+
+        /* Left */
+        .section-contact-us .contact-guide .contact-guide--title {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .section-contact-us .contact-guide ul {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+
+        .section-contact-us .contact-guide ul li {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .section-contact-us.section-contact-us>div {
+            width: 100% !important;
+        }
+
+        .section-contact-us .contact-guide ul {
+            display: none;
+        }
+
+        .section-contact-us .contact-guide .contact-guide--title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .section-contact-us {
+            flex-flow: column wrap !important;
+            padding: 40px 16px !important;
+        }
+
+        /* Left */
+        .section-contact-us .contact-guide .contact-guide--title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .section-contact-us .contact-guide ul {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+
+        .section-contact-us .contact-guide ul li {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    }
+</style>

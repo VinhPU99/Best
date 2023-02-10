@@ -1,0 +1,605 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/font-awesome.css" />
+
+    <!-- WOW -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://bestarion.com/wp-content/plugins/tabs-responsive/assets/css/animate.css?ver=5.9.3" />
+    <script src="https://bestarion.com/wp-content/themes/flash/js/wow.min.js"></script>
+    <script>
+        new WOW({
+            offset: 50,
+        }).init();
+    </script>
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            font-size: 10px;
+        }
+
+        @media screen and (min-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Montserrat, sans-serif;
+        }
+
+        :root {
+            --primary-color: #f58220;
+        }
+
+        body {
+            background: #fcf2eb;
+            box-sizing: border-box;
+        }
+
+        body>div {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+    <style>
+        .section.has-title-inner {
+            margin-top: 50px;
+        }
+
+        .wrap-title-inner {
+            width: 100%;
+        }
+
+        .title-inner {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .title-inner .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .title-inner .title {
+            font-size: 2rem;
+            line-height: 2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .title-inner .title .watermark {
+            font-size: 60px;
+            line-height: 60px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+
+        @media only screen and (min-width: 576px) {
+            .section.has-title-inner {
+                margin-top: 70px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 40px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.142rem;
+            }
+
+            .title-inner .title {
+                font-size: 2.142rem;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 80px;
+                line-height: 80px;
+                left: 5px;
+                top: -50px;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .section.has-title-inner {
+                margin-top: 90px;
+            }
+
+            .title-inner {
+                position: relative;
+                padding-bottom: 70px;
+            }
+
+            .title-inner .sub-title {
+                font-size: 1.428rem;
+                line-height: 1.428rem;
+            }
+
+            .title-inner .title {
+                font-size: 3.571rem;
+                line-height: 3.571rem;
+                margin-top: 13px;
+            }
+
+            .title-inner .title .watermark {
+                font-size: 120px;
+                line-height: 120px;
+                left: 5px;
+                top: -75px;
+                right: 0;
+            }
+        }
+    </style>
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            position: absolute;
+            width: 160px;
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-top {
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip-top::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip-right {
+            left: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-right::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #555 transparent transparent;
+        }
+
+        .tooltip-bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip .tooltip-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #555 transparent;
+        }
+
+        .tooltip-left {
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tooltip-left::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #555;
+        }
+    </style>
+    <style>
+        .row-action-center {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .row-action-center a {
+            display: inline-block;
+            color: white;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            padding: 6px 10px;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            text-decoration: unset;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+        }
+
+        .row-action-center a:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media only screen and (min-width: 576px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 6px 10px;
+                font-size: 1.166rem;
+                line-height: 1.166rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .row-action-center {
+                margin-top: 50px;
+            }
+
+            .row-action-center a {
+                padding: 12px 16px;
+                font-size: 1.142rem;
+                line-height: 1.142rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section section-5" id="stats">
+        <div class="info-group">
+            <div class="info-content">
+                <div class="sub-title">
+                    Do You Need a Meeting?
+                </div>
+                <div class="title">
+                    Save Time and Money with a Top IT Solution Company
+                </div>
+                <div class="row-action-center">
+                    <a href="#">Propel Your Business Now</a>
+                </div>
+                <div class="cert-list">
+                    <div class="cert">
+                        <div class="cert-name">
+                            ISO/IEC 27001
+                        </div>
+                        <div class="cert-des">
+                            Information Security Management
+                        </div>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-name">
+                            ISO 9001
+                        </div>
+                        <div class="cert-des">
+                            Quality Management Systems
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-group">
+            <div class="stats-list">
+                <div class="stats-item">
+                    <div class="stats-item-content">
+                        <div class="figure-number">
+                            <span class="count" data-count="95" data-duration="2000">0</span><span>+</span>
+                        </div>
+                        <div class="figure-label">
+                            Customer Satisfaction Index is 95% or higher
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-item-content">
+                        <div class="figure-number">
+                            <span class="count" data-count="95" data-duration="2000">0</span><span>+</span>
+                        </div>
+                        <div class="figure-label">
+                            Ratio of successful releases is 95% or higher
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-item-content">
+                        <div class="figure-number">
+                            <span class="count" data-count="215" data-duration="2000">0</span><span>+</span>
+                        </div>
+                        <div class="figure-label">
+                            Projects has been completed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section-5 {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 20px 0;
+        }
+
+        .section-5 .info-group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .section-5 .stats-group {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Info */
+        .section-5 .info-group .info-content {
+            width: 100%;
+        }
+
+        .section-5 .info-group .sub-title {
+            font-size: 1.142rem;
+        }
+
+        .section-5 .info-group .title {
+            font-size: 3.214rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .section-5 .info-group .row-action-center {
+            margin-top: 20px;
+            text-align: inherit;
+        }
+
+        .section-5 .info-group .row-action-center a {
+            border-radius: 25px;
+        }
+
+        /* Cert */
+
+        .section-5 .info-group .cert-list {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .section-5 .info-group .cert-list .cert {
+            padding: 10px 20px;
+        }
+
+        .section-5 .info-group .cert-list .cert {
+            border-left: 2px solid white;
+        }
+
+        .section-5 .info-group .cert-list .cert:first-child {
+            padding-left: 0;
+            border-left: unset;
+        }
+
+        .section-5 .info-group .cert-list .cert .cert-name {
+            font-size: 2.142rem;
+            font-weight: 700;
+        }
+
+        .section-5 .info-group .cert-list .cert .cert-des {
+            font-size: 1.142rem;
+            margin-top: 5px;
+        }
+
+
+        /* Stats */
+        .section-5 .stats-list {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+
+        .section-5 .stats-item {
+            width: calc(100%/3);
+            padding: 0 5px;
+        }
+
+        .section-5 .stats-item-content {
+            text-align: center;
+            border-radius: 5px;
+            min-height: 100%;
+            padding: 10px 5px;
+        }
+
+        .section-5 .stats-item:nth-child(1) .stats-item-content {
+            background-color: #F58220;
+        }
+
+        .section-5 .stats-item:nth-child(2) .stats-item-content {
+            background-color: #FAB400;
+        }
+
+        .section-5 .stats-item:nth-child(3) .stats-item-content {
+            background-color: #FFF389;
+        }
+
+        .section-5 .stats-item-content .figure-number {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .section-5 .stats-item-content .figure-label {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+
+        @media only screen and (min-width: 768px) {
+            .section-5 {
+                padding: 50px 0;
+            }
+
+            .section-5 .info-group .row-action-center {
+                margin-top: 45px;
+                text-align: inherit;
+            }
+
+            .section-5 .info-group .row-action-center a {
+                border-radius: 25px;
+            }
+
+            /* Cert */
+
+            .section-5 .info-group .cert-list {
+                display: flex;
+                margin-top: 50px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .section-5 {
+                flex-flow: row nowrap;
+                padding: 75px 0;
+            }
+
+            .section-5 .info-group {
+                flex: 1 1 auto;
+                width: unset;
+            }
+
+            .section-5 .stats-list {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .section-5 .info-group .info-content {
+                width: 80%
+            }
+
+            /* Info */
+            .section-5 .info-group .info-content {
+                width: 100%;
+            }
+
+            .section-5 .stats-group {
+                width: 220px;
+                margin-top: 0;
+            }
+
+            .section-5 .stats-item {
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .section-5 .stats-item-content .figure-number {
+                font-size: 2.875rem;
+            }
+
+            .section-5 .stats-item-content .figure-label {
+                font-size: 1.142rem;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <script>
+        $(function () {
+            var counted = false;
+
+            function scrollAction() {
+                var oTop = $('.section-5 .stats-list').offset().top - window.innerHeight;
+                if (!counted && $(window).scrollTop() > oTop) {
+                    $('.figure-number .count').each(function () {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count'),
+                            countDuration = +$this.attr('data-duration') || 1000;
+                        $({
+                            countNum: $this.text(),
+                        }).animate({
+                            countNum: countTo
+                        },
+
+                            {
+
+                                duration: countDuration,
+                                easing: 'swing',
+                                step: function () {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function () {
+                                    $this.text(this.countNum);
+                                }
+
+                            });
+                    });
+                    counted = true;
+                }
+            }
+
+            scrollAction();
+            setTimeout(() => {
+                $(window).scroll(scrollAction);
+            }, 1000);
+        });
+
+        window.onload(function (e) {
+            let list = document.querySelector('#menu-item-242')
+            list.addEventListener('click', () => {
+                list.classList.add('active');
+            })
+        });
+
+    </script>
+</body>
+
+</html>
